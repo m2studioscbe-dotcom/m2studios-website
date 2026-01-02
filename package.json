@@ -1,0 +1,18 @@
+{
+  "name": "m2_studios_website",
+  "version": "1.0.0",
+  "description": "A complete, professional, and responsive 3-page website for M² Studios, featuring Momentz Photography and Movementz Factory Dance Studio.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "grapesjs": "^0.22.14",
+    "grapesjs-blocks-basic": "^1.0.2",
+    "grapesjs-preset-webpage": "^1.0.3"
+  }
+}

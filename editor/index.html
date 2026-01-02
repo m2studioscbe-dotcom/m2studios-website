@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2 Studios Visual Editor</title>
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs/dist/css/grapes.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/grapesjs-preset-webpage/dist/grapesjs-preset-webpage.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        #gjs {
+            border: 3px solid #444;
+        }
+        .panel__top {
+            padding: 0;
+            width: 100%;
+            display: flex;
+            position: initial;
+            justify-content: center;
+            justify-content: space-between;
+        }
+        .panel__basic-actions {
+            position: initial;
+        }
+    </style>
+</head>
+<body>
+    <div id="gjs"></div>
+    
+    <script src="https://unpkg.com/grapesjs"></script>
+    <script src="https://unpkg.com/grapesjs-preset-webpage"></script>
+    <script src="editor.js"></script>
+    <script src="github-sync.js"></script>
+</body>
+</html>
