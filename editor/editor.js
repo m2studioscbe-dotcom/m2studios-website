@@ -2,10 +2,12 @@ const editor = grapesjs.init({
     container: '#gjs',
     height: '100vh',
     width: 'auto',
+    fromElement: true,
     storageManager: {
         type: 'local',
         autosave: true,
         autoload: true,
+        stepsBeforeSave: 1,
     },
     plugins: ['grapesjs-preset-webpage'],
     pluginsOpts: {
@@ -17,6 +19,9 @@ const editor = grapesjs.init({
                 return editor.getHtml() + '<style>' + editor.getCss() + '</style>';
             },
         }
+    },
+    blockManager: {
+        appendTo: '#blocks',
     },
     canvas: {
         styles: [
@@ -118,4 +123,27 @@ editor.Commands.add('export-template', {
     }
 });
 
-console.log('M2 Studios Visual Editor loaded successfully!');
+// Load M2 Studios website content
+fetch('../index.html')
+    .then(response => response.text())
+    .then(html => {
+        // Extract body content from the HTML
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const bodyContent = doc.body.innerHTML;
+        
+        // Set the content in the editor
+        editor.setComponents(bodyContent);
+        
+        // Load the CSS
+        fetch('../styles.css')
+            .then(response => response.text())
+            .then(css => {
+                editor.setStyle(css);
+                console.log('M2 Studios website loaded into editor successfully!');
+            });
+    })
+    .catch(error => {
+        console.log('Loading from local files failed, using default content');
+        console.log('M2 Studios Visual Editor loaded successfully!');
+    });
