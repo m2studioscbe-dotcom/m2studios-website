@@ -33,11 +33,16 @@ async function syncToGitHub(html, css) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M2 Studios</title>
-    <style>${css}</style>
+    <title>M² Studios - Where Movement Meets Moments</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Additional styles from GrapesJS editor */
+    ${css}
+    </style>
 </head>
 <body>
 ${html}
+    <script src="script.js"></script>
 </body>
 </html>`;
         
