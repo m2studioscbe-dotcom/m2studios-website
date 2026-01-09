@@ -68,3 +68,109 @@ collections:
               {label: "Instagram", name: "instagram", widget: "string", required: false},
               {label: "Twitter", name: "twitter", widget: "string", required: false}
             ]}
+
+
+  # NEW COLLECTION 1: Attendance Tracking
+  - name: "attendance"
+    label: "Attendance"
+    folder: "content/attendance"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Date", name: "date", widget: "datetime", default: ""}
+      - {label: "Student/Employee Name", name: "name", widget: "string"}
+      - {label: "Email", name: "email", widget: "string", required: false}
+      - {label: "Class/Department", name: "class", widget: "select", options: ["Contemporary Dance", "Hip-Hop", "Ballet", "Jazz", "Photography", "Events", "Staff"]}
+      - {label: "Status", name: "status", widget: "select", options: ["Present", "Absent", "Late", "Excused"], default: "Present"}
+      - {label: "Check-in Time", name: "checkin_time", widget: "datetime", required: false}
+      - {label: "Check-out Time", name: "checkout_time", widget: "datetime", required: false}
+      - {label: "Notes", name: "notes", widget: "text", required: false}
+
+  # NEW COLLECTION 2: Team Members
+  - name: "team"
+    label: "Team Members"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Role/Position", name: "role", widget: "string"}
+      - {label: "Photo", name: "photo", widget: "image"}
+      - {label: "Bio", name: "bio", widget: "text"}
+      - {label: "Email", name: "email", widget: "string", required: false}
+      - {label: "Phone", name: "phone", widget: "string", required: false}
+      - {label: "Specialties", name: "specialties", widget: "list", required: false}
+      - {label: "Social Media", name: "social", widget: "object", required: false, fields: [{label: "Facebook", name: "facebook", widget: "string", required: false}, {label: "Instagram", name: "instagram", widget: "string", required: false}, {label: "Twitter", name: "twitter", widget: "string", required: false}, {label: "LinkedIn", name: "linkedin", widget: "string", required: false}]}
+      - {label: "Order", name: "order", widget: "number", default: 0, value_type: "int"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+
+  # NEW COLLECTION 3: Form Submissions
+  - name: "forms"
+    label: "Form Submissions"
+    folder: "content/forms"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Submission Date", name: "date", widget: "datetime", default: ""}
+      - {label: "Form Type", name: "form_type", widget: "select", options: ["Contact", "Booking", "Registration", "Newsletter", "Other"]}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Phone", name: "phone", widget: "string", required: false}
+      - {label: "Message", name: "message", widget: "text"}
+      - {label: "Status", name: "status", widget: "select", options: ["New", "In Progress", "Completed", "Archived"], default: "New"}
+      - {label: "Notes", name: "notes", widget: "text", required: false}
+
+  # NEW COLLECTION 4: Testimonials
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Client Name", name: "name", widget: "string"}
+      - {label: "Client Photo", name: "photo", widget: "image", required: false}
+      - {label: "Rating", name: "rating", widget: "select", options: ["5", "4", "3", "2", "1"], default: "5"}
+      - {label: "Testimonial", name: "testimonial", widget: "text"}
+      - {label: "Service Used", name: "service", widget: "select", options: ["Dance Classes", "Photography", "Event Coverage", "Other"]}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+      - {label: "Approved", name: "approved", widget: "boolean", default: false}
+
+  # NEW COLLECTION 5: Events & Classes Schedule
+  - name: "events"
+    label: "Events & Classes"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Event Name", name: "title", widget: "string"}
+      - {label: "Event Type", name: "event_type", widget: "select", options: ["Dance Class", "Workshop", "Performance", "Photo Session", "Special Event"]}
+      - {label: "Start Date & Time", name: "start_date", widget: "datetime"}
+      - {label: "End Date & Time", name: "end_date", widget: "datetime"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Instructor/Host", name: "instructor", widget: "string", required: false}
+      - {label: "Price", name: "price", widget: "string", required: false}
+      - {label: "Max Participants", name: "max_participants", widget: "number", required: false}
+      - {label: "Registration Link", name: "registration_link", widget: "string", required: false}
+      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - {label: "Status", name: "status", widget: "select", options: ["Upcoming", "Ongoing", "Completed", "Cancelled"], default: "Upcoming"}
+
+  # NEW COLLECTION 6: Students/Members Database
+  - name: "students"
+    label: "Students/Members"
+    folder: "content/students"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Full Name", name: "name", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
+      - {label: "Phone", name: "phone", widget: "string", required: false}
+      - {label: "Date of Birth", name: "dob", widget: "datetime", required: false}
+      - {label: "Photo", name: "photo", widget: "image", required: false}
+      - {label: "Enrollment Date", name: "enrollment_date", widget: "datetime"}
+      - {label: "Classes Enrolled", name: "classes", widget: "list", required: false}
+      - {label: "Membership Type", name: "membership", widget: "select", options: ["Basic", "Pro", "Enterprise", "Trial"], default: "Basic"}
+      - {label: "Status", name: "status", widget: "select", options: ["Active", "Inactive", "Suspended"], default: "Active"}
+      - {label: "Emergency Contact", name: "emergency_contact", widget: "object", required: false, fields: [{label: "Name", name: "name", widget: "string"}, {label: "Phone", name: "phone", widget: "string"}, {label: "Relationship", name: "relationship", widget: "string"}]}
+      - {label: "Notes", name: "notes", widget: "text", required: false}  
