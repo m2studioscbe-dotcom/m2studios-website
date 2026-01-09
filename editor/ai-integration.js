@@ -9,13 +9,13 @@
     // Configuration
     const CONFIG = {
         // Direct API with your OpenAI key
-        OPENAI_API_KEY: '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',
+        OPENAI_API_KEY: '', // Not needed - using Cloudflare Worker
         
         // Cloudflare Worker Proxy (optional, for better security)
-        API_ENDPOINT: 'https://m2studios-ai-proxy.YOUR-SUBDOMAIN.workers.dev',
+        API_ENDPOINT: 'https://m2studios-ai-proxy.m2studios-cbe.workers.dev',
         
         // Using direct API (set to true to use Cloudflare Worker instead)
-        USE_PROXY: false,
+        USE_PROXY: true,
         OPENAI_DIRECT_URL: 'https://api.openai.com/v1',
         
         // Model settings
