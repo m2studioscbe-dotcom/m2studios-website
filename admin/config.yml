@@ -1,7 +1,7 @@
 backend:
-     name: github
-       repo: m2studioscbe-dotcom/m2studios-website
-       branch: main
+  name: github
+  repo: m2studioscbe-dotcom/m2studios-website
+  branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
