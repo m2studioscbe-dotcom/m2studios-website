@@ -147,3 +147,77 @@ fetch('../index.html')
         console.log('Loading from local files failed, using default content');
         console.log('M2 Studios Visual Editor loaded successfully!');
     });
+
+// ========== SAVE/LOAD/DEPLOY BUTTONS ==========
+
+// Add Save Button
+const saveBtn = document.createElement('button');
+saveBtn.innerHTML = '💾 Save';
+saveBtn.style.cssText = 'position: fixed; top: 10px; right: 370px; z-index: 1000; padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;';
+saveBtn.onclick = async () => {
+    try {
+        const html = editor.getHtml();
+        const css = editor.getCss();
+        const content = JSON.stringify(editor.getProjectData());
+        saveBtn.innerHTML = '⏳ Saving...';
+        saveBtn.disabled = true;
+        const response = await fetch('/api/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ content, html, css, pageName: 'index' })
+        });
+        const result = await response.json();
+        if (result.success) {
+            saveBtn.innerHTML = '✅ Saved!';
+            setTimeout(() => { saveBtn.innerHTML = '💾 Save'; saveBtn.disabled = false; }, 2000);
+        } else { throw new Error(result.error || 'Save failed'); }
+    } catch (error) {
+        alert('Error saving: ' + error.message);
+        saveBtn.innerHTML = '💾 Save'; saveBtn.disabled = false;
+    }
+};
+document.body.appendChild(saveBtn);
+
+// Add Load Button
+const loadBtn = document.createElement('button');
+loadBtn.innerHTML = '📂 Load';
+loadBtn.style.cssText = 'position: fixed; top: 10px; right: 260px; z-index: 1000; padding: 10px 20px; background: #2196F3; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;';
+loadBtn.onclick = async () => {
+    try {
+        loadBtn.innerHTML = '⏳ Loading...'; loadBtn.disabled = true;
+        const response = await fetch('/api/load?page=index');
+        const result = await response.json();
+        if (result.success && result.content) {
+            editor.loadProjectData(JSON.parse(result.content));
+            loadBtn.innerHTML = '✅ Loaded!';
+            setTimeout(() => { loadBtn.innerHTML = '📂 Load'; loadBtn.disabled = false; }, 2000);
+        } else { throw new Error(result.error || 'Load failed'); }
+    } catch (error) {
+        alert('Error loading: ' + error.message);
+        loadBtn.innerHTML = '📂 Load'; loadBtn.disabled = false;
+    }
+};
+document.body.appendChild(loadBtn);
+
+// Add Deploy Button
+const deployBtn = document.createElement('button');
+deployBtn.innerHTML = '🚀 Deploy';
+deployBtn.style.cssText = 'position: fixed; top: 10px; right: 140px; z-index: 1000; padding: 10px 20px; background: #FF9800; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;';
+deployBtn.onclick = async () => {
+    try {
+        if (!confirm('Deploy to production?')) return;
+        deployBtn.innerHTML = '⏳ Deploying...'; deployBtn.disabled = true;
+        const response = await fetch('/api/deploy', { method: 'POST' });
+        const result = await response.json();
+        if (result.success) {
+            deployBtn.innerHTML = '✅ Deployed!'; alert('Deployment triggered!');
+            setTimeout(() => { deployBtn.innerHTML = '🚀 Deploy'; deployBtn.disabled = false; }, 3000);
+        } else { throw new Error(result.error || 'Deploy failed'); }
+    } catch (error) {
+        alert('Error deploying: ' + error.message);
+        deployBtn.innerHTML = '🚀 Deploy'; deployBtn.disabled = false;
+    }
+};
+document.body.appendChild(deployBtn);
+
+console.log('✅ Save/Load/Deploy buttons loaded!');

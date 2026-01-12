@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2 Studios Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-tachometer-alt"></i> M2 Studios Admin Dashboard</h1>
+            <div class="user-info">
+                <span>Admin User</span>
+                <button class="btn btn-secondary" onclick="window.location.href='../editor/'"><i class="fas fa-edit"></i> Editor</button>
+            </div>
+        </div>
+        
+        <!-- Metrics Cards -->
+        <div class="metrics-grid">
+            <div class="metric-card deploy">
+                <div class="icon"><i class="fas fa-rocket"></i></div>
+                <h3>Last Deployment</h3>
+                <div class="value" id="last-deploy">--</div>
+                <div class="subtext">Loading...</div>
+            </div>
+            
+            <div class="metric-card pages">
+                <div class="icon"><i class="fas fa-file-alt"></i></div>
+                <h3>Total Pages</h3>
+                <div class="value" id="total-pages">--</div>
+                <div class="subtext">Managed pages</div>
+            </div>
+            
+            <div class="metric-card ai">
+                <div class="icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Requests</h3>
+                <div class="value" id="ai-requests">--</div>
+                <div class="subtext">This month</div>
+            </div>
+            
+            <div class="metric-card workflows">
+                <div class="icon"><i class="fas fa-cogs"></i></div>
+                <h3>Active Workflows</h3>
+                <div class="value" id="active-workflows">5</div>
+                <div class="subtext">N8n workflows</div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Workflow Monitor -->
+            <div class="workflow-monitor">
+                <div class="section-header">
+                    <h2><i class="fas fa-stream"></i> Workflow Monitor</h2>
+                    <button class="btn btn-primary" onclick="refreshWorkflows()"><i class="fas fa-sync"></i> Refresh</button>
+                </div>
+                
+                <div class="workflow-list" id="workflow-list">
+                    <div class="workflow-item success">
+                        <div class="workflow-info">
+                            <h4>page_save <span class="status-badge active">Active</span></h4>
+                            <p>Last execution: Just now • Status: Success</p>
+                        </div>
+                        <div class="workflow-actions">
+                            <button class="btn btn-success" onclick="triggerWorkflow('page_save')"><i class="fas fa-play"></i> Run</button>
+                            <button class="btn btn-secondary" onclick="viewLogs('page_save')"><i class="fas fa-list"></i> Logs</button>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-item success">
+                        <div class="workflow-info">
+                            <h4>page_load <span class="status-badge active">Active</span></h4>
+                            <p>Last execution: 5 min ago • Status: Success</p>
+                        </div>
+                        <div class="workflow-actions">
+                            <button class="btn btn-success" onclick="triggerWorkflow('page_load')"><i class="fas fa-play"></i> Run</button>
+                            <button class="btn btn-secondary" onclick="viewLogs('page_load')"><i class="fas fa-list"></i> Logs</button>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-item success">
+                        <div class="workflow-info">
+                            <h4>deploy_trigger <span class="status-badge active">Active</span></h4>
+                            <p>Last execution: 1 hour ago • Status: Success</p>
+                        </div>
+                        <div class="workflow-actions">
+                            <button class="btn btn-success" onclick="triggerWorkflow('deploy_trigger')"><i class="fas fa-play"></i> Run</button>
+                            <button class="btn btn-secondary" onclick="viewLogs('deploy_trigger')"><i class="fas fa-list"></i> Logs</button>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-item success">
+                        <div class="workflow-info">
+                            <h4>ai_generate <span class="status-badge active">Active</span></h4>
+                            <p>Last execution: 10 min ago • Status: Success</p>
+                        </div>
+                        <div class="workflow-actions">
+                            <button class="btn btn-success" onclick="triggerWorkflow('ai_generate')"><i class="fas fa-play"></i> Run</button>
+                            <button class="btn btn-secondary" onclick="viewLogs('ai_generate')"><i class="fas fa-list"></i> Logs</button>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow-item success">
+                        <div class="workflow-info">
+                            <h4>log_sync <span class="status-badge active">Active</span></h4>
+                            <p>Last execution: 2 min ago • Status: Success</p>
+                        </div>
+                        <div class="workflow-actions">
+                            <button class="btn btn-success" onclick="triggerWorkflow('log_sync')"><i class="fas fa-play"></i> Run</button>
+                            <button class="btn btn-secondary" onclick="viewLogs('log_sync')"><i class="fas fa-list"></i> Logs</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Execution Logs -->
+                <div class="execution-log" id="execution-log">
+                    <div class="log-entry success">
+                        <span class="timestamp">[2026-01-12 07:26:00]</span>
+                        <span>log_sync executed successfully</span>
+                    </div>
+                    <div class="log-entry success">
+                        <span class="timestamp">[2026-01-12 07:21:00]</span>
+                        <span>ai_generate executed successfully</span>
+                    </div>
+                    <div class="log-entry success">
+                        <span class="timestamp">[2026-01-12 07:20:00]</span>
+                        <span>page_load executed successfully</span>
+                    </div>
+                    <div class="log-entry success">
+                        <span class="timestamp">[2026-01-12 06:26:00]</span>
+                        <span>deploy_trigger executed successfully</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AI Assistant -->
+            <div class="ai-assistant">
+                <div class="section-header">
+                    <h2><i class="fas fa-robot"></i> AI Assistant</h2>
+                </div>
+                
+                <div class="ai-chat">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message ai">
+                            <strong>AI Assistant:</strong><br>
+                            Hello! I can help you with system commands like:
+                            <ul style="margin-top: 10px; padding-left: 20px;">
+                                <li>"Deploy latest version"</li>
+                                <li>"Show workflow status"</li>
+                                <li>"Generate content for homepage"</li>
+                                <li>"Check last deployment"</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input">
+                        <input type="text" id="ai-input" placeholder="Type a command..." onkeypress="if(event.key==='Enter') sendAICommand()">
+                        <button class="btn btn-primary" onclick="sendAICommand()"><i class="fas fa-paper-plane"></i> Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>
