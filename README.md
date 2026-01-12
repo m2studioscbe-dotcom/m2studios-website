@@ -285,3 +285,5 @@ This website template is created for M² Studios. All rights reserved.
 **Ready to launch!** 🚀
 
 Simply replace the placeholders with your actual content and you're good to go!
+/ /   T r i g g e r   d e p l o y m e n t   w i t h   e n v i r o n m e n t   v a r i a b l e s   -   0 1 / 1 2 / 2 0 2 6   1 0 : 1 6 : 3 7  
+ 
