@@ -5,7 +5,7 @@ export async function onRequestPost(context) {
     const body = await request.json();
     
     // Call N8n page_save webhook
-    const webhookUrl = 'http://localhost:5678/webhook/cf2978cb-b520-4435-b2a7-dcf971f58a31';
+    const webhookUrl = env.N8N_PAGE_SAVE_WEBHOOK;
     
     const response = await fetch(webhookUrl, {
       method: 'POST',

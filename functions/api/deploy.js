@@ -1,8 +1,9 @@
 // Trigger Cloudflare deployment via N8n
 export async function onRequestPost(context) {
   try {
+    const { env } = context;
     // Call N8n deploy_trigger webhook
-    const webhookUrl = 'http://localhost:5678/webhook/e9d3eb31-55bb-489a-8893-f09cf70296a2';
+    const webhookUrl = env.N8N_DEPLOY_WEBHOOK;
     
     const response = await fetch(webhookUrl, {
       method: 'POST',

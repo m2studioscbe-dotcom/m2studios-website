@@ -1,12 +1,12 @@
 // Load page content from GitHub via N8n
 export async function onRequestGet(context) {
   try {
-    const { request } = context;
+    const { request, env } = context;
     const url = new URL(request.url);
     const pageName = url.searchParams.get('page') || 'index';
     
     // Call N8n page_load webhook
-    const webhookUrl = 'http://localhost:5678/webhook/c0b4e462-db03-4d80-9c88-ef817e79f733';
+    const webhookUrl = env.N8N_PAGE_LOAD_WEBHOOK;
     
     const response = await fetch(webhookUrl, {
       method: 'POST',

@@ -64,16 +64,19 @@ export async function onRequestPost(context) {
 
     // Log to N8n for tracking (don't fail if this fails)
     try {
-      await fetch('http://localhost:5678/webhook/0c44b279-6a34-4865-9fef-82365e5fc065', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          prompt: body.prompt,
-          type,
-          content: generatedContent,
-          timestamp: new Date().toISOString()
-        })
-      });
+      const logWebhook = env.N8N_AI_GENERATE_WEBHOOK;
+      if (logWebhook) {
+          await fetch(logWebhook, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            prompt: body.prompt,
+            type,
+            content: generatedContent,
+            timestamp: new Date().toISOString()
+          })
+        });
+      }
     } catch (n8nError) {
       console.error('N8n logging failed:', n8nError);
     }
