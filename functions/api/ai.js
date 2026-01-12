@@ -1,28 +1,87 @@
-// Generate AI content via N8n
+// Generate AI content using OpenAI API
 export async function onRequestPost(context) {
   try {
-    const { request } = context;
+    const { request, env } = context;
     const body = await request.json();
     
-    // Call N8n ai_generate webhook
-    const webhookUrl = 'http://localhost:5678/webhook/0c44b279-6a34-4865-9fef-82365e5fc065';
+    const openaiKey = env.OPENAI_API_KEY;
+    if (!openaiKey) {
+      return new Response(JSON.stringify({
+        success: false,
+        error: 'OpenAI API key not configured'
+      }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      });
+    }
+
+    // Prepare system prompt based on type
+    let systemPrompt = 'You are a helpful AI assistant for web design and content creation.';
+    const type = body.type || 'general';
     
-    const response = await fetch(webhookUrl, {
+    if (type === 'hero') {
+      systemPrompt = 'You are an expert web designer. Generate modern, engaging hero section content with compelling headlines and CTAs.';
+    } else if (type === 'features') {
+      systemPrompt = 'You are an expert at creating feature sections. Generate clear, benefit-focused feature descriptions.';
+    } else if (type === 'about') {
+      systemPrompt = 'You are an expert copywriter. Create authentic, engaging About section content.';
+    } else if (type === 'contact') {
+      systemPrompt = 'You are an expert at creating contact sections. Generate welcoming, action-oriented contact content.';
+    }
+
+    // Call OpenAI API
+    const openaiResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${openaiKey}`
+      },
       body: JSON.stringify({
-        prompt: body.prompt,
-        type: body.type || 'content',
-        context: body.context || {}
+        model: 'gpt-4',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: body.prompt }
+        ],
+        temperature: 0.7,
+        max_tokens: 1000
       })
     });
-    
-    const result = await response.json();
+
+    if (!openaiResponse.ok) {
+      const error = await openaiResponse.text();
+      return new Response(JSON.stringify({
+        success: false,
+        error: 'AI generation failed',
+        details: error
+      }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' }
+      });
+    }
+
+    const data = await openaiResponse.json();
+    const generatedContent = data.choices[0].message.content;
+
+    // Log to N8n for tracking (don't fail if this fails)
+    try {
+      await fetch('http://localhost:5678/webhook/0c44b279-6a34-4865-9fef-82365e5fc065', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          prompt: body.prompt,
+          type,
+          content: generatedContent,
+          timestamp: new Date().toISOString()
+        })
+      });
+    } catch (n8nError) {
+      console.error('N8n logging failed:', n8nError);
+    }
     
     return new Response(JSON.stringify({
       success: true,
-      content: result.content || result.response || 'AI response generated',
-      metadata: result.metadata || {}
+      content: generatedContent,
+      metadata: { type, model: 'gpt-4' }
     }), {
       headers: { 
         'Content-Type': 'application/json',
