@@ -1,7 +1,7 @@
 /* ===========================
    M2 STUDIOS & EVENTS - PREMIUM STYLESHEET
    Gold & Black Visual Identity
-   Momentz Photography × Movementz Factory
+   Momentz Photography � Movementz Factory
    =========================== */
 
 /* === GOOGLE FONTS === */
@@ -33,6 +33,17 @@
     --whatsapp: #25d366;
     --success: #4CAF50;
     --error: #D32F2F;
+    
+    /* Semantic Aliases */
+    --primary-color: var(--gold-primary);
+    --secondary-color: var(--gold-metallic);
+    --accent-color: var(--gold-light);
+    --text-dark: var(--black-deep);
+    --text-light: var(--white-soft);
+    --gray: var(--gray-medium);
+    --light-bg: var(--white-soft);
+    --dark-bg: var(--black-deep);
+    --transition: all 0.3s ease;
     
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -603,7 +614,7 @@ ul {
 }
 
 .service-features li:before {
-    content: '✓';
+    content: '?';
     position: absolute;
     left: 0;
     color: var(--success);
@@ -746,7 +757,7 @@ ul {
 }
 
 .features-list li:before {
-    content: '▶';
+    content: '?';
     position: absolute;
     left: 0;
     color: var(--secondary-color);
@@ -1596,14 +1607,7 @@ ul {
     box-shadow: 0 8px 25px var(--gold-glow);
 }
 
-.btn-whatsapp {
-    background: linear-gradient(135deg, #25D366, #20ba5a);
-    color: white;
-}
-
-.btn-whatsapp:hover {
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-}
+/* WhatsApp button override removed - using primary definition */
 
 @media (max-width: 768px) {
     .floating-buttons {
