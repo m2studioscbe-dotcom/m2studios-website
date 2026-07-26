@@ -1,0 +1,61 @@
+/* === BUTTONS === */
+.btn {
+    display: inline-block; padding: 14px 35px; border-radius: 50px;
+    font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.95rem;
+    text-align: center; text-transform: uppercase; letter-spacing: 1px;
+    cursor: pointer; transition: var(--transition-smooth);
+    border: 2px solid transparent; position: relative; overflow: hidden;
+}
+.btn::before {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    width: 0; height: 0; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s;
+}
+.btn:hover::before { width: 300px; height: 300px; }
+.btn-primary {
+    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-metallic) 100%);
+    color: var(--black-deep); border: 2px solid var(--gold-primary);
+    box-shadow: 0 4px 15px var(--gold-glow);
+}
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--gold-metallic) 0%, var(--gold-dark) 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px var(--gold-glow), 0 0 30px rgba(212, 175, 55, 0.2);
+}
+.btn-secondary {
+    background: transparent; color: var(--gold-primary); border: 2px solid var(--gold-primary);
+}
+.btn-secondary:hover {
+    background: var(--gold-primary); color: var(--black-deep);
+    transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px var(--gold-glow);
+}
+.btn-outline {
+    background-color: transparent; border: 2px solid var(--gold-primary); color: var(--gold-primary);
+}
+.btn-outline:hover {
+    background-color: var(--gold-primary); color: var(--black-deep);
+    transform: scale(1.02); box-shadow: 0 8px 25px var(--gold-glow);
+}
+.btn-outline-white {
+    background-color: transparent; border: 2px solid var(--white-pure); color: var(--white-pure);
+}
+.btn-outline-white:hover {
+    background-color: var(--white-pure); color: var(--black-deep);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+.btn-whatsapp {
+    background-color: var(--whatsapp); color: var(--white-pure); border: 2px solid var(--whatsapp);
+}
+.btn-whatsapp:hover {
+    background-color: #20ba5a; transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+.btn-instagram {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    color: var(--white-pure); border: 2px solid transparent;
+}
+.btn-instagram:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(131, 58, 180, 0.4);
+}
