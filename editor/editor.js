@@ -1,4 +1,4 @@
-const editor = grapesjs.init({
+﻿const editor = grapesjs.init({
     container: '#gjs',
     height: '100vh',
     width: 'auto',

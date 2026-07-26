@@ -1,4 +1,4 @@
-// GitHub sync functionality for GrapesJS
+﻿// GitHub sync functionality for GrapesJS
 // This will save designs directly to your GitHub repository
 
 async function syncToGitHub(html, css) {

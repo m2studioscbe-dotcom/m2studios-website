@@ -1,4 +1,4 @@
-// AI Integration for M2 Studios GrapesJS Editor
+﻿// AI Integration for M2 Studios GrapesJS Editor
 // Connects to /api/ai endpoint (which calls n8n webhook)
 
 // Create AI Panel UI
