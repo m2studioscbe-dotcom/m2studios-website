@@ -1,26 +1,37 @@
-<header class="header">
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="/images/logo.png" alt="M STUDIOS &amp; EVENTS Logo" class="logo-img">
-                <div class="logo-text">
-                    <h1>M&#178; STUDIOS &amp; EVENTS</h1>
-                    <p class="tagline">Momentz &amp; Movementz</p>
-                </div>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="/index.html" {{#if activeHome}}class="active"{{/if}}>Home</a></li>
-                <li><a href="/index.html#about">About</a></li>
-                <li><a href="/services.html" {{#if activeServices}}class="active"{{/if}}>Services</a></li>
-                <li><a href="/portfolio.html" {{#if activePortfolio}}class="active"{{/if}}>Portfolio</a></li>
-                <li><a href="/portfolio.html#contact">Contact</a></li>
+<header class="header" id="site-header">
+    <div class="header-inner">
+        <a href="/index.html" class="logo" aria-label="M&#178; Studios &amp; Events - Home">
+            <img src="/images/logo.png" alt="M&#178; Studios &amp; Events Logo" class="logo-img" width="44" height="44">
+            <span class="logo-text">
+                <span class="logo-name">M&#178; STUDIOS &amp; EVENTS</span>
+                <span class="logo-tagline">Momentz &amp; Movementz</span>
+            </span>
+        </a>
+        <nav class="nav" id="site-nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/index.html" class="nav-link {{#if activeHome}}active{{/if}}">Home</a></li>
+                <li class="nav-item"><a href="/index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item nav-dropdown">
+                    <a href="/services.html" class="nav-link {{#if activeServices}}active{{/if}}">Services
+                        <svg class="nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="/services.html#dance" class="dropdown-item">Dance Classes</a>
+                        <a href="/services.html#photography" class="dropdown-item">Photography</a>
+                        <a href="/services.html#events" class="dropdown-item">Event Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/services.html#faq" class="dropdown-item">FAQs</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="/portfolio.html" class="nav-link {{#if activePortfolio}}active{{/if}}">Portfolio</a></li>
+                <li class="nav-item"><a href="/portfolio.html#contact" class="nav-link">Contact</a></li>
             </ul>
-            <a href="/portfolio.html#contact" class="btn btn-primary">Enquire Now</a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-cta">
+                <a href="https://wa.me/919790825751" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Enquire Now</a>
             </div>
-        </div>
-    </nav>
+        </nav>
+        <button class="mobile-menu-btn" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+        </button>
+    </div>
 </header>
