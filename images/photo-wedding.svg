@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c0a09"/><stop offset="1" stop-color="#191310"/></linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.3" r="1"><stop offset="0" stop-color="#E8C76A" stop-opacity="0.3"/><stop offset="1" stop-color="#E8C76A" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="960" height="720" fill="url(#bg)"/>
+  <rect width="960" height="720" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity="0.05"><line x1="0" y1="660" x2="300" y2="0"/><line x1="140" y1="720" x2="480" y2="0"/><line x1="300" y1="720" x2="660" y2="0"/><line x1="480" y1="720" x2="840" y2="0"/><line x1="660" y1="720" x2="960" y2="120"/><line x1="840" y1="720" x2="960" y2="300"/></g>
+  <circle cx="480" cy="240" r="6" fill="#E8C76A" fill-opacity="0.5"/><circle cx="420" cy="200" r="3" fill="#E8C76A" fill-opacity="0.35"/>
+  <text x="56" y="96" font-family="Georgia, serif" font-size="52" fill="#E8C76A" font-weight="bold">M&#178;</text>
+  <text x="56" y="540" font-family="Georgia, serif" font-size="44" fill="#ffffff">Wedding Photography</text>
+  <text x="58" y="584" font-family="Verdana, sans-serif" font-size="16" letter-spacing="4" fill="#ffffff" fill-opacity="0.55">MOMENTZ PHOTOGRAPHY</text>
+  <rect x="56" y="496" width="72" height="3" fill="#E8C76A"/>
+</svg>
