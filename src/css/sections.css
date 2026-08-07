@@ -603,6 +603,33 @@
   transition: transform 0.8s var(--ease-out-expo);
 }
 
+.gallery-item[data-category="dance"] { aspect-ratio: 4/5; }
+
+.gallery-item.content-required {
+  aspect-ratio: 4/3;
+  cursor: default;
+  pointer-events: none;
+  background: rgba(212, 175, 55, 0.04);
+}
+
+.gallery-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.gallery-note {
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--white-muted);
+  max-width: 34ch;
+}
+
 .gallery-item:hover img { transform: scale(1.08); }
 
 .gallery-overlay {
