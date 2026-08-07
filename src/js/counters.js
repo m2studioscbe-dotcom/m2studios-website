@@ -1,4 +1,4 @@
-const numbers = document.querySelectorAll('.stat-number[data-target]');
+const numbers = document.querySelectorAll('[data-target]');
 
 if (numbers.length) {
     const format = (n) => (n >= 1000 ? n.toLocaleString('en-IN') : String(n));
