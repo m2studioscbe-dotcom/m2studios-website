@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://m2studios-website.pages.dev/sitemap.xml

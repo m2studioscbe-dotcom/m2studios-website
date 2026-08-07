@@ -2,3 +2,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{title}}</title>
 {{#if metaDescription}}<meta name="description" content="{{metaDescription}}">{{/if}}
+<meta name="theme-color" content="#0a0a0c">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+{{#if canonical}}<link rel="canonical" href="{{canonical}}">{{/if}}
+<!-- Open Graph -->
+<meta property="og:type" content="{{#if ogType}}{{ogType}}{{else}}website{{/if}}">
+<meta property="og:site_name" content="M&#178; Studios &amp; Events">
+<meta property="og:title" content="{{title}}">
+{{#if metaDescription}}<meta property="og:description" content="{{metaDescription}}">{{/if}}
+{{#if canonical}}<meta property="og:url" content="{{canonical}}">{{/if}}
+{{#if ogImage}}<meta property="og:image" content="{{ogImage}}">{{/if}}
+<meta property="og:locale" content="en_IN">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{title}}">
+{{#if metaDescription}}<meta name="twitter:description" content="{{metaDescription}}">{{/if}}
+{{#if ogImage}}<meta name="twitter:image" content="{{ogImage}}">{{/if}}
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Outfit:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "M\u00B2 Studios & Events",
+  "alternateName": ["Movementz Factory Dance Studio", "Momentz Photography"],
+  "url": "https://m2studios-website.pages.dev/",
+  "logo": "https://m2studios-website.pages.dev/images/logo.png",
+  "description": "Professional dance training (Movementz Factory) and photography & events (Momentz) under one roof in Coimbatore.",
+  "telephone": "+919790825751",
+  "email": "m2studios.cbe@gmail.com",
+  "sameAs": [
+    "https://instagram.com/m2studios",
+    "https://facebook.com/m2studios",
+    "https://youtube.com/m2studios"
+  ]
+}
+</script>

@@ -1,16 +1,32 @@
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-const observer = new IntersectionObserver((entries) => {
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.service-card, .testimonial-card, .feature-item, .gallery-item, .service-category, .service-preview-card, .value-card, .studio-gallery-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .text-reveal').forEach(el => io.observe(el));
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!reducedMotion && window.innerWidth > 768) {
+    gsap.utils.toArray('.parallax').forEach(el => {
+        gsap.to(el, {
+            yPercent: 12,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: el,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true,
+            },
+        });
+    });
+}

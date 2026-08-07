@@ -1,197 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{> head title="M² Studios - Where Movement Meets Moments" metaDescription="M² Studios - Professional dance training and photography services under one roof. Movementz Factory Dance Studio and Momentz Photography in Coimbatore."}}
+    {{> head title="M&#178; Studios &amp; Events | Dance Studio &amp; Photography in Coimbatore" metaDescription="M&#178; Studios brings Movementz Factory Dance Studio and Momentz Photography together - professional dance classes, wedding &amp; event photography, and choreography in Coimbatore." canonical="https://m2studios-website.pages.dev/" ogImage="https://m2studios-website.pages.dev/images/og-cover.svg"}}
 </head>
-<body>
+<body class="page-home">
+    <div class="loading-screen" id="loading-screen" aria-hidden="true">
+        <div class="loading-logo">M&#178;</div>
+        <div class="loading-progress"><div class="loading-progress-bar" id="loading-bar"></div></div>
+    </div>
+
     {{> header activeHome=true}}
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="container">
-                <h1 class="hero-title">M² STUDIOS &amp; EVENTS</h1>
-                <h2 class="hero-subtitle">Momentz &amp; Movementz</h2>
-                <p class="hero-description">
-                    A creative studio combining professional dance training and photography services under one roof.
-                    We unite two pillars: movement and moments. We train dancers, document stories, and produce events.
-                </p>
-                <div class="hero-buttons">
-                    <a href="/services.html#dance" class="btn btn-primary">Explore Dance Classes</a>
-                    <a href="/services.html#photography" class="btn btn-secondary">Explore Photography</a>
-                    <a href="https://wa.me/919790825751" class="btn btn-whatsapp" target="_blank">WhatsApp Us</a>
+    <main>
+        <section class="hero">
+            <div class="hero-canvas" id="hero-canvas"></div>
+            <div class="hero-content">
+                <span class="hero-badge">Dance &middot; Photography &middot; Events</span>
+                <h1 class="hero-title">Where Movement<br><span class="gold">Meets Moments</span></h1>
+                <p class="hero-subtitle">M&#178; Studios unites Movementz Factory Dance Studio and Momentz Photography - professional dance training, cinematic photography, and event production under one roof.</p>
+                <div class="hero-actions">
+                    <a href="/services.html#dance" class="btn btn-primary btn-lg">Explore Dance Classes</a>
+                    <a href="/services.html#photography" class="btn btn-secondary btn-lg">Explore Photography</a>
+                    <a href="https://wa.me/919790825751" target="_blank" rel="noopener" class="btn btn-outline btn-lg">WhatsApp Us</a>
                 </div>
             </div>
-        </div>
-        <div class="hero-background"></div>
-    </section>
+            <a href="#about" class="hero-scroll">Scroll to explore
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+        </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About M² Studios</h2>
-                <div class="title-underline"></div>
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item"><div class="stat-number" data-target="500">0</div><div class="stat-label">Students Trained</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="1000">0</div><div class="stat-label">Events Captured</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="10">0</div><div class="stat-label">Years Experience</div></div>
+                    <div class="stat-item"><div class="stat-number" data-target="50">0</div><div class="stat-label">Workshops &amp; Shows</div></div>
+                </div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Two Passions, One Studio</h3>
-                    <p>M² Studios is a unique creative space that brings together the art of movement and the craft of capturing moments. We are home to <strong>Movementz Factory Dance Studio</strong> and <strong>Momentz Photography</strong>, offering comprehensive services for dancers, artists, families, and businesses.</p>
-                    <p>Our mission is to nurture talent, celebrate creativity, and preserve memories through professional dance training and exceptional photography services. Whether you're looking to learn a new dance style, capture your special moments, or document your events, M² Studios is your one-stop destination.</p>
-                    <div class="about-stats">
-                        <div class="stat-item"><h4>500+</h4><p>Students Trained</p></div>
-                        <div class="stat-item"><h4>1000+</h4><p>Events Captured</p></div>
-                        <div class="stat-item"><h4>10+</h4><p>Years Experience</p></div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-visual reveal-left">
+                        <img src="/images/studio-interior.svg" alt="Inside M&#178; Studios dance floor and studio">
+                        <div class="about-experience">
+                            <div class="experience-item"><div class="experience-number">10+</div><div class="experience-label">Years of Passion</div></div>
+                            <div class="experience-item"><div class="experience-number">2</div><div class="experience-label">Creative Divisions</div></div>
+                            <div class="experience-item"><div class="experience-number">500+</div><div class="experience-label">Happy Students</div></div>
+                        </div>
+                    </div>
+                    <div class="about-text reveal-right">
+                        <span class="section-tag">About Us</span>
+                        <h2 class="section-title">Two Passions, <span class="text-gold">One Studio</span></h2>
+                        <p class="lead">We train dancers, document stories, and produce events people remember.</p>
+                        <p class="description">M&#178; Studios is a creative space home to <strong>Movementz Factory Dance Studio</strong> and <strong>Momentz Photography</strong>. From a child's first steps on the dance floor to professional choreography, from wedding celebrations to brand campaigns - we nurture talent and preserve memories.</p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                                <div class="feature-content"><h4>Certified Instructors</h4><p>Experienced, passionate trainers</p></div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></div>
+                                <div class="feature-content"><h4>Pro-Grade Equipment</h4><p>Studio lighting &amp; camera gear</p></div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                                <div class="feature-content"><h4>Vibrant Community</h4><p>Supportive creative family</p></div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg></div>
+                                <div class="feature-content"><h4>Trusted Locally</h4><p>Loved by families &amp; businesses</p></div>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <a href="/portfolio.html" class="btn btn-primary">View Our Work</a>
+                        </div>
                     </div>
                 </div>
-                <div class="about-image"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="division-highlight dance-division">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Movementz Factory Dance Studio</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Professional dance training for all ages and skill levels. From kids to adults, we offer classes in various dance styles to help you express yourself through movement.</p>
-            </div>
-            <div class="service-preview-grid">
-                <div class="service-preview-card">
-                    <div class="preview-icon"><span class="icon-emoji">👟</span></div>
-                    <h3>Kids Dance Classes</h3>
-                    <p>Ages 4-12 | Fun, engaging classes that build confidence, coordination, and creativity through dance.</p>
-                    <ul class="preview-features"><li>Creative Movement</li><li>Hip-Hop for Kids</li><li>Bollywood Dance</li><li>Ballet Basics</li></ul>
+        <section class="divisions section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Divisions</span>
+                    <h2 class="section-title">Movementz &amp; <span class="text-gold">Momentz</span></h2>
+                    <p class="section-subtitle">Two creative pillars powering everything we do.</p>
                 </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><span class="icon-emoji">🔥</span></div>
-                    <h3>Teen Dance Programs</h3>
-                    <p>Ages 13-17 | Intensive training for young dancers ready to take their skills to the next level.</p>
-                    <ul class="preview-features"><li>Advanced Hip-Hop</li><li>Contemporary &amp; Lyrical</li><li>Competition Teams</li><li>Choreography Workshops</li></ul>
-                </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><span class="icon-emoji">🎵</span></div>
-                    <h3>Adult Dance Classes</h3>
-                    <p>Ages 18+ | Never too late to start! Beginner-friendly classes for fitness, fun, and self-expression.</p>
-                    <ul class="preview-features"><li>Bollywood Fitness</li><li>Hip-Hop &amp; Urban Dance</li><li>Contemporary Dance</li><li>Salsa &amp; Latin Dance</li></ul>
-                </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3QgZmlsbD0iI2EyOWJmZSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iOCIvPjx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDAiIHk9IjQ1Ij5Qcm88L3RleHQ+PC9zdmc+" alt="Professional Choreography"></div>
-                    <h3>Professional Choreography</h3>
-                    <p>Custom choreography for weddings, events, and performances tailored to your vision.</p>
-                    <ul class="preview-features"><li>Wedding Choreography</li><li>Event Performances</li><li>Stage Shows</li><li>Music Video Choreography</li></ul>
-                </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3QgZmlsbD0iI2ZkNzlhOCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iOCIvPjx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDAiIHk9IjQ1Ij5Xb3Jrc2hvcDwvdGV4dD48L3N2Zz4=" alt="Workshops"></div>
-                    <h3>Workshops &amp; Events</h3>
-                    <p>Special programs, masterclasses, and seasonal camps with renowned choreographers.</p>
-                    <ul class="preview-features"><li>Weekend Workshops</li><li>Celebrity Masterclasses</li><li>Summer/Winter Camps</li><li>Performance Opportunities</li></ul>
+                <div class="grid grid-2">
+                    <a href="/services.html#dance" class="division-card reveal" aria-label="Explore Movementz Factory Dance Studio">
+                        <div class="division-media"><img src="/images/dance-choreo.svg" alt="Movementz Factory Dance Studio classes"></div>
+                        <div class="division-overlay">
+                            <span class="division-tag">Movementz Factory</span>
+                            <h3 class="division-name">Dance Studio</h3>
+                            <p class="division-desc">Classes for all ages - hip-hop, contemporary, Bollywood, choreography and more.</p>
+                            <span class="division-link">Explore Dance
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="/services.html#photography" class="division-card reveal" aria-label="Explore Momentz Photography">
+                        <div class="division-media"><img src="/images/photo-portrait.svg" alt="Momentz Photography portrait work"></div>
+                        <div class="division-overlay">
+                            <span class="division-tag">Momentz Photography</span>
+                            <h3 class="division-name">Photography &amp; Events</h3>
+                            <p class="division-desc">Weddings, events, portraits and brand shoots that capture every precious moment.</p>
+                            <span class="division-link">Explore Photography
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="section-cta"><a href="/services.html#dance" class="btn btn-primary">Explore Dance Programs</a></div>
-        </div>
-    </section>
+        </section>
 
-    <section class="division-highlight photography-division">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Momentz Photography</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Professional photography services to capture your most precious moments. From events to portraits, we specialize in creating timeless memories through our lens.</p>
+        <section class="events section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">What's On</span>
+                    <h2 class="section-title">Events &amp; <span class="text-gold">Workshops</span></h2>
+                    <p class="section-subtitle">Masterclasses, camps and showcases - keep an eye on the M&#178; calendar.</p>
+                </div>
+                <div class="grid grid-3">
+                    <article class="event-card reveal">
+                        <div class="event-date"><span class="event-day">15</span><span class="event-month">AUG</span></div>
+                        <div class="event-content">
+                            <span class="event-category">Kids Camp</span>
+                            <h3 class="event-title">Independence Day Dance Special</h3>
+                            <p class="event-desc">A fun patriotic dance camp for kids aged 4-12. Learn a group routine and perform on stage.</p>
+                            <div class="event-meta">
+                                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>10:00 AM</span>
+                                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>At Studio</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="event-card reveal">
+                        <div class="event-date"><span class="event-day">22</span><span class="event-month">AUG</span></div>
+                        <div class="event-content">
+                            <span class="event-category">Masterclass</span>
+                            <h3 class="event-title">Advanced Choreography Workshop</h3>
+                            <p class="event-desc">An intensive session on technique, musicality and stage presence for teens and adults.</p>
+                            <div class="event-meta">
+                                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>5:00 PM</span>
+                                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>At Studio</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="event-card reveal">
+                        <div class="event-date"><span class="event-day">30</span><span class="event-month">AUG</span></div>
+                        <div class="event-content">
+                            <span class="event-category">Showcase</span>
+                            <h3 class="event-title">Dance Showcase Night</h3>
+                            <p class="event-desc">Students perform the routines they've trained for all term, in front of family and friends.</p>
+                            <div class="event-meta">
+                                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>6:00 PM</span>
+                                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Auditorium</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="section-cta">
+                    <a href="https://wa.me/919790825751?text=Hi%20M%C2%B2%20Studios!%20I%20want%20to%20know%20more%20about%20your%20events%20and%20workshops." target="_blank" rel="noopener" class="btn btn-primary">Book Your Slot</a>
+                </div>
             </div>
-            <div class="service-preview-grid">
-                <div class="service-preview-card">
-                    <div class="preview-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3QgZmlsbD0iI2UxNzA1NSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iOCIvPjx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDAiIHk9IjQ1Ij5XZWRkaW5nPC90ZXh0Pjwvc3ZnPg==" alt="Wedding Photography"></div>
-                    <h3>Wedding Photography</h3>
-                    <p>Complete wedding coverage from pre-wedding shoots to reception, capturing every precious moment.</p>
-                    <ul class="preview-features"><li>Full Day Coverage</li><li>Candid &amp; Traditional</li><li>High-Resolution Photos</li><li>Online Gallery</li></ul>
-                </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3QgZmlsbD0iIzA5ODRlMyIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iOCIvPjx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDAiIHk9IjQ1Ij5FdmVudDwvdGV4dD48L3N2Zz4=" alt="Event Photography"></div>
-                    <h3>Event Coverage</h3>
-                    <p>Professional documentation of corporate events, cultural programs, and special celebrations.</p>
-                    <ul class="preview-features"><li>Corporate Events</li><li>Cultural Programs</li><li>Birthday Parties</li><li>Anniversary Celebrations</li></ul>
-                </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3QgZmlsbD0iIzAwYjg5NCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iOCIvPjx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDAiIHk9IjQ1Ij5DYW5kaWQ8L3RleHQ+PC9zdmc+" alt="Candid Photography"></div>
-                    <h3>Candid Photography</h3>
-                    <p>Authentic, unposed moments that tell your story naturally with genuine emotions.</p>
-                    <ul class="preview-features"><li>Candid Wedding Coverage</li><li>Lifestyle Photography</li><li>Event Candids</li><li>Behind-the-Scenes</li></ul>
-                </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3QgZmlsbD0iIzZjNWNlNyIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iOCIvPjx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDAiIHk9IjQ1Ij5Qb3J0cmFpdDwvdGV4dD48L3N2Zz4=" alt="Portrait Photography"></div>
-                    <h3>Portrait Shoots</h3>
-                    <p>Professional portraits for individuals, families, and professionals in studio or outdoor settings.</p>
-                    <ul class="preview-features"><li>Individual Portraits</li><li>Family Portraits</li><li>Professional Headshots</li><li>Maternity &amp; Newborn</li></ul>
-                </div>
-                <div class="service-preview-card">
-                    <div class="preview-icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHJlY3QgZmlsbD0iI2ZkY2I2ZSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iOCIvPjx0ZXh0IGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iNDAiIHk9IjQ1Ij5CcmFuZDwvdGV4dD48L3N2Zz4=" alt="Commercial Photography"></div>
-                    <h3>Commercial / Brand Shoots</h3>
-                    <p>High-quality commercial photography for businesses, products, and brand identity.</p>
-                    <ul class="preview-features"><li>Product Photography</li><li>Food Photography</li><li>Fashion Photography</li><li>Corporate Portraits</li></ul>
-                </div>
-            </div>
-            <div class="section-cta"><a href="/services.html#photography" class="btn btn-primary">Explore Photography Services</a></div>
-        </div>
-    </section>
+        </section>
 
-    <section class="why-choose-us">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Why Choose M² Studios?</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">What makes us the perfect choice for your dance and photography needs</p>
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Testimonials</span>
+                    <h2 class="section-title">What Our <span class="text-gold">Community Says</span></h2>
+                </div>
+                <div class="testimonial-slider" id="testimonial-slider">
+                    <div class="testimonial-track" id="testimonial-track">
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="testimonial-text">&ldquo;M&#178; Studios has been an incredible experience for my daughter. The instructors are professional, patient and truly passionate. Highly recommend!&rdquo;</p>
+                            <div class="testimonial-author">
+                                <span class="testimonial-avatar">P</span>
+                                <div class="testimonial-info"><h5>Priya Sharma</h5><span>Parent, Dance Student</span></div>
+                            </div>
+                        </article>
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="testimonial-text">&ldquo;The Momentz team captured our wedding beautifully. Every moment was perfectly documented and the candid shots are absolutely stunning.&rdquo;</p>
+                            <div class="testimonial-author">
+                                <span class="testimonial-avatar">RA</span>
+                                <div class="testimonial-info"><h5>Rahul &amp; Anjali</h5><span>Wedding Photography</span></div>
+                            </div>
+                        </article>
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="testimonial-text">&ldquo;As an adult beginner I was nervous about joining dance classes. The instructors made me feel welcome and confident. A transformative journey!&rdquo;</p>
+                            <div class="testimonial-author">
+                                <span class="testimonial-avatar">A</span>
+                                <div class="testimonial-info"><h5>Amit Patel</h5><span>Adult Dance Student</span></div>
+                            </div>
+                        </article>
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="testimonial-text">&ldquo;We booked M&#178; for a corporate event - choreography, stage setup and event photography. One team, zero stress. Flawless execution.&rdquo;</p>
+                            <div class="testimonial-author">
+                                <span class="testimonial-avatar">S</span>
+                                <div class="testimonial-info"><h5>Sanjay Kumar</h5><span>Corporate Client</span></div>
+                            </div>
+                        </article>
+                        <article class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="testimonial-text">&ldquo;Our pre-wedding shoot and portrait session with Momentz was effortless. Creative direction, amazing lighting and photos we will treasure forever.&rdquo;</p>
+                            <div class="testimonial-author">
+                                <span class="testimonial-avatar">KV</span>
+                                <div class="testimonial-info"><h5>Kavya &amp; Vikram</h5><span>Pre-Wedding Shoot</span></div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="testimonial-nav" id="testimonial-nav"></div>
             </div>
-            <div class="value-cards-grid">
-                <div class="value-card"><div class="value-icon">🏆</div><h3>10+ Years of Experience</h3><p>Over a decade of expertise in dance training and professional photography, serving 500+ students and capturing 1000+ events.</p></div>
-                <div class="value-card"><div class="value-icon">🎨</div><h3>Creative Excellence</h3><p>Our team of passionate artists brings innovative choreography and artistic photography to every project.</p></div>
-                <div class="value-card"><div class="value-icon">⭐</div><h3>Professional Standards</h3><p>State-of-the-art facilities, certified instructors, and professional-grade photography equipment ensure top-quality results.</p></div>
-                <div class="value-card"><div class="value-icon">🤝</div><h3>Vibrant Community</h3><p>Join a supportive community of dancers and artists who share your passion for movement and creativity.</p></div>
-                <div class="value-card"><div class="value-icon">💎</div><h3>Personalized Attention</h3><p>Small class sizes and customized photography packages ensure individual attention and tailored experiences.</p></div>
-                <div class="value-card"><div class="value-icon">🎁</div><h3>Flexible &amp; Affordable</h3><p>Competitive pricing with flexible packages designed to fit your budget and requirements.</p></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="final-cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Start Your Journey With M² Studios</h2>
-                <p>Whether you want to learn dance or capture your precious moments, we're here to help you create something beautiful.</p>
-                <div class="cta-buttons">
-                    <a href="/portfolio.html#contact" class="btn btn-primary">Contact Us</a>
-                    <a href="https://wa.me/919790825751" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
-                    <a href="https://instagram.com/m2studios" target="_blank" class="btn btn-instagram">📸 Instagram</a>
+        <section class="gallery section" id="gallery">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Work</span>
+                    <h2 class="section-title">Creative <span class="text-gold">Portfolio</span></h2>
+                    <p class="section-subtitle">A glimpse of dance, photography and events captured by M&sup2; Studios.</p>
                 </div>
-                <p class="cta-subtext">Call us at +91 9790825751 or visit our studio today!</p>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="dance">Dance</button>
+                    <button class="filter-btn" data-filter="photography">Photography</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn" data-filter="wedding">Wedding</button>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="dance events">
+                        <img src="/images/dance-choreo.svg" alt="Dance performance at Movementz Factory" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Stage Performance</span><span class="gallery-cat">Dance</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="photography wedding">
+                        <img src="/images/photo-wedding.svg" alt="Wedding photography" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Wedding Moments</span><span class="gallery-cat">Photography</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="dance">
+                        <img src="/images/dance-kids.svg" alt="Kids dance class" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Kids Dance Class</span><span class="gallery-cat">Dance</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="photography events">
+                        <img src="/images/photo-event.svg" alt="Event photography" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Event Coverage</span><span class="gallery-cat">Photography</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="dance events">
+                        <img src="/images/dance-stage.svg" alt="Dance workshop" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Workshop</span><span class="gallery-cat">Dance</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="photography">
+                        <img src="/images/photo-portrait.svg" alt="Portrait photography" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Portrait Session</span><span class="gallery-cat">Photography</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="dance">
+                        <img src="/images/dance-teen.svg" alt="Teen dance" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Teen Crew</span><span class="gallery-cat">Dance</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="photography wedding">
+                        <img src="/images/photo-prewedding.svg" alt="Pre-wedding photography" loading="lazy" />
+                        <div class="gallery-info"><span class="gallery-title">Pre-Wedding</span><span class="gallery-cat">Photography</span></div>
+                    </div>
+                </div>
+                <div class="section-cta">
+                    <a href="/portfolio.html" class="btn btn-primary">View Full Portfolio</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">What Our Clients Say</h2>
-                <div class="title-underline"></div>
+        <section class="showreel section" id="showreel">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Watch</span>
+                    <h2 class="section-title">Our <span class="text-gold">Showreel</span></h2>
+                    <p class="section-subtitle">Dance. Photos. Events. See M&sup2; Studios in motion.</p>
+                </div>
+                <div class="showreel-player">
+                    <div class="showreel-placeholder">
+                        <div class="showreel-logo">M&sup2;</div>
+                        <p class="showreel-text">Cinematic Showreel<br><span>Coming Soon</span></p>
+                        <div class="showreel-play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="showreel-stats">
+                    <div class="showreel-stat"><span class="showreel-num">150+</span><span class="showreel-lbl">Videos Produced</span></div>
+                    <div class="showreel-stat"><span class="showreel-num">50+</span><span class="showreel-lbl">Events Covered</span></div>
+                    <div class="showreel-stat"><span class="showreel-num">4.9</span><span class="showreel-lbl">Client Rating</span></div>
+                </div>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"M² Studios has been an incredible experience for my daughter. The dance instructors are professional, patient, and truly passionate about teaching. Highly recommend!"</p>
-                    <div class="testimonial-author"><h4>Priya Sharma</h4><p>Parent - Dance Student</p></div>
+        </section>
+
+        <section class="section" id="instagram">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Follow Us</span>
+                    <h2 class="section-title">M&sup2; On <span class="text-gold">Instagram</span></h2>
+                    <p class="section-subtitle">Behind the scenes, fresh drops and daily studio energy.</p>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"The photography team at Momentz captured our wedding beautifully. Every moment was perfectly documented. The candid shots are absolutely stunning!"</p>
-                    <div class="testimonial-author"><h4>Rahul &amp; Anjali</h4><p>Wedding Photography Client</p></div>
+                <div class="insta-feed">
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="insta-item" aria-label="Instagram post">
+                        <img src="/images/dance-choreo.svg" alt="Instagram dance post" loading="lazy" />
+                        <span class="insta-overlay"><span class="insta-likes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>1.2k</span></span>
+                    </a>
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="insta-item" aria-label="Instagram post">
+                        <img src="/images/photo-wedding.svg" alt="Instagram wedding post" loading="lazy" />
+                        <span class="insta-overlay"><span class="insta-likes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>980</span></span>
+                    </a>
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="insta-item" aria-label="Instagram post">
+                        <img src="/images/dance-kids.svg" alt="Instagram kids class post" loading="lazy" />
+                        <span class="insta-overlay"><span class="insta-likes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>1.5k</span></span>
+                    </a>
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="insta-item" aria-label="Instagram post">
+                        <img src="/images/photo-event.svg" alt="Instagram event post" loading="lazy" />
+                        <span class="insta-overlay"><span class="insta-likes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>760</span></span>
+                    </a>
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="insta-item" aria-label="Instagram post">
+                        <img src="/images/dance-stage.svg" alt="Instagram workshop post" loading="lazy" />
+                        <span class="insta-overlay"><span class="insta-likes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>2.1k</span></span>
+                    </a>
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="insta-item" aria-label="Instagram post">
+                        <img src="/images/photo-portrait.svg" alt="Instagram portrait post" loading="lazy" />
+                        <span class="insta-overlay"><span class="insta-likes"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>1.1k</span></span>
+                    </a>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"As an adult beginner, I was nervous about joining dance classes. The instructors made me feel welcome and confident. It's been a transformative journey!"</p>
-                    <div class="testimonial-author"><h4>Amit Patel</h4><p>Adult Dance Student</p></div>
+                <div class="section-cta">
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="btn btn-outline">Follow @m2studios</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="cta section">
+            <div class="container">
+                <h2 class="cta-title">Ready to Start Your Journey?</h2>
+                <p class="cta-text">Book a trial dance class, plan a shoot, or enquire about event services today.</p>
+                <div class="cta-actions">
+                    <a href="https://wa.me/919790825751?text=Hi%20M%C2%B2%20Studios!%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" class="btn btn-primary btn-lg">WhatsApp Us</a>
+                    <a href="/portfolio.html#contact" class="btn btn-outline btn-lg">Send an Enquiry</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     {{> footer}}
 </body>

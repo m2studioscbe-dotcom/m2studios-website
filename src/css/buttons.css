@@ -1,61 +1,136 @@
-/* === BUTTONS === */
 .btn {
-    display: inline-block; padding: 14px 35px; border-radius: 50px;
-    font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.95rem;
-    text-align: center; text-transform: uppercase; letter-spacing: 1px;
-    cursor: pointer; transition: var(--transition-smooth);
-    border: 2px solid transparent; position: relative; overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
 }
+
 .btn::before {
-    content: ''; position: absolute; top: 50%; left: 50%;
-    width: 0; height: 0; border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translate(-50%, -50%); transition: width 0.6s, height 0.6s;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s var(--ease-out-expo);
+  z-index: -1;
 }
-.btn:hover::before { width: 300px; height: 300px; }
+
+.btn:hover::before { transform: translateX(100%); }
+
+.btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.btn:disabled { opacity: 0.4; pointer-events: none; }
+
 .btn-primary {
-    background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-metallic) 100%);
-    color: var(--black-deep); border: 2px solid var(--gold-primary);
-    box-shadow: 0 4px 15px var(--gold-glow);
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  color: var(--black);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-gold);
 }
+
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--gold-metallic) 0%, var(--gold-dark) 100%);
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px var(--gold-glow), 0 0 30px rgba(212, 175, 55, 0.2);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(200,169,98,0.35);
 }
+
+.btn-primary:active { transform: translateY(-1px) scale(0.98); }
+
 .btn-secondary {
-    background: transparent; color: var(--gold-primary); border: 2px solid var(--gold-primary);
+  background: var(--glass-bg);
+  color: var(--white);
+  border-color: var(--glass-border);
+  backdrop-filter: blur(20px);
 }
+
 .btn-secondary:hover {
-    background: var(--gold-primary); color: var(--black-deep);
-    transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px var(--gold-glow);
+  background: var(--glass-bg-hover);
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-md);
 }
+
+.btn-secondary:active { transform: translateY(-1px) scale(0.98); }
+
 .btn-outline {
-    background-color: transparent; border: 2px solid var(--gold-primary); color: var(--gold-primary);
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
 }
+
 .btn-outline:hover {
-    background-color: var(--gold-primary); color: var(--black-deep);
-    transform: scale(1.02); box-shadow: 0 8px 25px var(--gold-glow);
+  background: var(--gold);
+  color: var(--black);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-gold);
 }
-.btn-outline-white {
-    background-color: transparent; border: 2px solid var(--white-pure); color: var(--white-pure);
+
+.btn-ghost {
+  background: transparent;
+  color: var(--white-muted);
+  border-color: transparent;
+  padding: var(--space-3) var(--space-6);
 }
-.btn-outline-white:hover {
-    background-color: var(--white-pure); color: var(--black-deep);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+
+.btn-ghost:hover {
+  color: var(--gold);
+  background: var(--glass-bg);
 }
-.btn-whatsapp {
-    background-color: var(--whatsapp); color: var(--white-pure); border: 2px solid var(--whatsapp);
+
+.btn-lg { padding: var(--space-5) var(--space-12); font-size: var(--text-base); }
+.btn-sm { padding: var(--space-2) var(--space-5); font-size: var(--text-xs); }
+.btn-xs { padding: var(--space-1) var(--space-3); font-size: var(--text-xs); }
+
+.btn-icon {
+  padding: var(--space-3);
+  border-radius: 50%;
+  aspect-ratio: 1;
 }
-.btn-whatsapp:hover {
-    background-color: #20ba5a; transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+
+.btn-icon svg { width: 20px; height: 20px; }
+
+.btn-magnetic {
+  transition: transform 0.3s var(--ease-out-expo);
 }
-.btn-instagram {
-    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-    color: var(--white-pure); border: 2px solid transparent;
+
+.btn-full { width: 100%; }
+
+.btn-group { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .btn-group { flex-direction: column; }
+  .btn-group .btn { width: 100%; }
 }
-.btn-instagram:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(131, 58, 180, 0.4);
+
+.btn-loading { pointer-events: none; color: transparent; }
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
 }
+
+@keyframes spin { to { transform: rotate(360deg); } }
