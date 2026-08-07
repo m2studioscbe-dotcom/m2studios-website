@@ -1,160 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{> head title="Portfolio &amp; Contact - M&#178; Studios" metaDescription="Explore our work and get in touch. Dance performances, photography projects, and contact form at M&#178; Studios."}}
+    {{> head title="Portfolio | M&#178; Studios - Our Work in Dance &amp; Photography" metaDescription="Browse the M&#178; Studios portfolio - dance performances, weddings, portraits, events and studio work by Movementz Factory and Momentz Photography." canonical="https://m2studios-website.pages.dev/portfolio.html" ogImage="https://m2studios-website.pages.dev/images/og-cover.svg" ogType="website"}}
 </head>
-<body>
+<body class="page-portfolio">
     {{> header activePortfolio=true}}
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Portfolio &amp; Gallery</h1>
-            <p>Explore our work and get in touch</p>
-        </div>
-    </section>
-
-    <section class="portfolio-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Work</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">A glimpse into our dance performances and photography projects</p>
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <span class="section-tag">Our Work</span>
+                <h1 class="page-title">Portfolio &amp; Gallery</h1>
+                <p class="page-subtitle">A glimpse of the moves we choreograph and the moments we capture.</p>
             </div>
+        </section>
 
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="dance">Dance</button>
-                <button class="filter-btn" data-filter="photography">Photography</button>
-                <button class="filter-btn" data-filter="events">Events</button>
-                <button class="filter-btn" data-filter="portraits">Portraits</button>
-            </div>
-
-            <div class="gallery-category">
-                <h3 class="gallery-category-title">Dance Performances &amp; Classes</h3>
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-category="dance"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZmY2YjZiIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5LaWRzIERhbmNlIFBlcmZvcm1hbmNlPC90ZXh0Pjwvc3ZnPg==" alt="Kids Dance Performance"><div class="gallery-overlay"><h4>Kids Dance Performance</h4><p>Annual Recital 2024</p></div></div>
-                    <div class="gallery-item" data-category="dance"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjNGVjZGM0IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5IaXAgSG9wIENsYXNzPC90ZXh0Pjwvc3ZnPg==" alt="Hip Hop Class"><div class="gallery-overlay"><h4>Hip Hop Class</h4><p>Teen Batch Training</p></div></div>
-                    <div class="gallery-item" data-category="dance"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZjljYTI0IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5Db250ZW1wb3JhcnkgRGFuY2U8L3RleHQ+PC9zdmc+" alt="Contemporary Dance"><div class="gallery-overlay"><h4>Contemporary Dance</h4><p>Adult Workshop</p></div></div>
-                    <div class="gallery-item" data-category="dance"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjYTI5YmZlIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5Cb2xseXdvb2QgUGVyZm9ybWFuY2U8L3RleHQ+PC9zdmc+" alt="Bollywood Performance"><div class="gallery-overlay"><h4>Bollywood Performance</h4><p>Cultural Festival 2024</p></div></div>
-                    <div class="gallery-item" data-category="dance"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZmQ3OWE4IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5DbGFzc2ljYWwgRGFuY2U8L3RleHQ+PC9zdmc+" alt="Classical Dance"><div class="gallery-overlay"><h4>Classical Dance</h4><p>Bharatanatyam Arangetram</p></div></div>
-                    <div class="gallery-item" data-category="dance"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjNmM1Y2U3IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5EYW5jZSBDb21wZXRpdGlvbjwvdGV4dD48L3N2Zz4=" alt="Dance Competition"><div class="gallery-overlay"><h4>Dance Competition</h4><p>Winners - State Level</p></div></div>
+        <section class="gallery section">
+            <div class="container">
+                <div class="gallery-filters" id="gallery-filters" role="tablist" aria-label="Filter gallery">
+                    <button class="filter-btn active" data-filter="all" type="button">All</button>
+                    <button class="filter-btn" data-filter="dance" type="button">Dance</button>
+                    <button class="filter-btn" data-filter="photography" type="button">Photography</button>
+                    <button class="filter-btn" data-filter="studio" type="button">Studio</button>
+                </div>
+                <div class="gallery-grid" id="gallery-grid">
+                    <figure class="gallery-item" data-category="dance">
+                        <img src="/images/dance-kids.svg" alt="Kids dance class performance" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Kids Class Performance</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="photography">
+                        <img src="/images/photo-wedding.svg" alt="Wedding photography" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Photography</span><span class="gallery-title">Wedding Coverage</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="studio">
+                        <img src="/images/studio-interior.svg" alt="Studio interior" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Studio</span><span class="gallery-title">Our Dance Floor</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="dance">
+                        <img src="/images/dance-teen.svg" alt="Teen dance crew" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Teen Crew Practice</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="photography">
+                        <img src="/images/photo-portrait.svg" alt="Portrait photography" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Photography</span><span class="gallery-title">Portrait Session</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="dance">
+                        <img src="/images/dance-stage.svg" alt="Stage performance" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Showcase Night</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="photography">
+                        <img src="/images/photo-prewedding.svg" alt="Pre-wedding shoot" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Photography</span><span class="gallery-title">Pre-Wedding Shoot</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="studio">
+                        <img src="/images/studio-class.svg" alt="In-class moments" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Studio</span><span class="gallery-title">In-Class Moments</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="photography">
+                        <img src="/images/photo-event.svg" alt="Event photography" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Photography</span><span class="gallery-title">Corporate Event</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="dance">
+                        <img src="/images/dance-choreo.svg" alt="Choreography training" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Choreography Session</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="photography">
+                        <img src="/images/photo-candid.svg" alt="Candid photography" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Photography</span><span class="gallery-title">Candid Moments</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="dance">
+                        <img src="/images/dance-adult.svg" alt="Adult dance class" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Adult Batch</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="studio">
+                        <img src="/images/studio-setup.svg" alt="Studio lighting setup" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Studio</span><span class="gallery-title">Lighting Setup</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="photography">
+                        <img src="/images/photo-headshot.svg" alt="Model headshots" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Photography</span><span class="gallery-title">Model Headshots</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="dance">
+                        <img src="/images/dance-workshop.svg" alt="Dance workshop" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Masterclass</span></figcaption>
+                    </figure>
                 </div>
             </div>
+        </section>
 
-            <div class="gallery-category">
-                <h3 class="gallery-category-title">Photography Portfolio</h3>
-                <div class="gallery-grid">
-                    <div class="gallery-item" data-category="photography events"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjMDBiODk0IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5XZWRkaW5nIFBob3RvZ3JhcGh5PC90ZXh0Pjwvc3ZnPg==" alt="Wedding Photography"><div class="gallery-overlay"><h4>Wedding Photography</h4><p>Destination Wedding - Goa</p></div></div>
-                    <div class="gallery-item" data-category="photography portraits"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZTE3MDU1IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5GYW1pbHkgUG9ydHJhaXQ8L3RleHQ+PC9zdmc+" alt="Family Portrait"><div class="gallery-overlay"><h4>Family Portrait</h4><p>Outdoor Session</p></div></div>
-                    <div class="gallery-item" data-category="photography events"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjMDk4NGUzIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5Db3Jwb3JhdGUgRXZlbnQ8L3RleHQ+PC9zdmc+" alt="Corporate Event"><div class="gallery-overlay"><h4>Corporate Event</h4><p>Product Launch</p></div></div>
-                    <div class="gallery-item" data-category="photography portraits"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZmRjYjZlIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5NYXRlcm5pdHkgU2hvb3Q8L3RleHQ+PC9zdmc+" alt="Maternity Shoot"><div class="gallery-overlay"><h4>Maternity Shoot</h4><p>Studio Session</p></div></div>
-                    <div class="gallery-item" data-category="photography events"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZDYzMDMxIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5DdWx0dXJhbCBFdmVudDwvdGV4dD48L3N2Zz4=" alt="Cultural Event"><div class="gallery-overlay"><h4>Cultural Event</h4><p>Dance Festival Coverage</p></div></div>
-                    <div class="gallery-item" data-category="photography portraits"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjMDBjZWM5IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5Qcm9mZXNzaW9uYWwgSGVhZHNob3RzPC90ZXh0Pjwvc3ZnPg==" alt="Professional Headshots"><div class="gallery-overlay"><h4>Professional Headshots</h4><p>Corporate Portfolio</p></div></div>
-                    <div class="gallery-item" data-category="photography events"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZmFiMWEwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5QcmUgV2VkZGluZyBTaG9vdDwvdGV4dD48L3N2Zz4=" alt="Pre Wedding Shoot"><div class="gallery-overlay"><h4>Pre-Wedding Shoot</h4><p>Romantic Outdoor Session</p></div></div>
-                    <div class="gallery-item" data-category="photography portraits"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjNzRiOWZmIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5LaWRzIFBvcnRyYWl0PC90ZXh0Pjwvc3ZnPg==" alt="Kids Portrait"><div class="gallery-overlay"><h4>Kids Portrait</h4><p>Fun &amp; Creative Session</p></div></div>
-                    <div class="gallery-item" data-category="photography events"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjYTI5YmZlIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5CaXJ0aGRheSBQYXJ0eTwvdGV4dD48L3N2Zz4=" alt="Birthday Party"><div class="gallery-overlay"><h4>Birthday Party</h4><p>Candid Moments</p></div></div>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Watch</span>
+                    <h2 class="section-title">Dance in <span class="text-gold">Motion</span></h2>
+                    <p class="section-subtitle">Performance reels, showcases and behind-the-scenes - follow us on Instagram and YouTube.</p>
+                </div>
+                <div class="grid grid-3">
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="video-card reveal">
+                        <div class="video-thumb"><img src="/images/dance-stage.svg" alt="Showcase performance video" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></span></div>
+                        <div class="video-meta"><span class="video-tag">Reel</span><h3 class="video-title">Showcase Highlights</h3></div>
+                    </a>
+                    <a href="https://youtube.com/m2studios" target="_blank" rel="noopener" class="video-card reveal">
+                        <div class="video-thumb"><img src="/images/dance-choreo.svg" alt="Choreography video" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></span></div>
+                        <div class="video-meta"><span class="video-tag">Choreo</span><h3 class="video-title">Choreography Film</h3></div>
+                    </a>
+                    <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="video-card reveal">
+                        <div class="video-thumb"><img src="/images/photo-wedding.svg" alt="Wedding film" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></span></div>
+                        <div class="video-meta"><span class="video-tag">Film</span><h3 class="video-title">Wedding Highlight</h3></div>
+                    </a>
                 </div>
             </div>
+        </section>
 
-            <div class="gallery-category">
-                <h3 class="gallery-category-title">Video Portfolio</h3>
-                <div class="video-grid">
-                    <div class="video-item"><div class="video-placeholder"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iMzE1Ij48cmVjdCBmaWxsPSIjZmY2YjZiIiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjMxNSIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI4MCIgeT0iMTYyIj5EYW5jZSBQZXJmb3JtYW5jZSBWaWRlbzwvdGV4dD48L3N2Zz4=" alt="Dance Performance Video"><div class="play-button">&#9654;</div></div><h4>Dance Performance Highlights</h4><p>Annual Show 2024</p></div>
-                    <div class="video-item"><div class="video-placeholder"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iMzE1Ij48cmVjdCBmaWxsPSIjNGVjZGM0IiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjMxNSIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI4MCIgeT0iMTYyIj5XZWRkaW5nIEhpZ2hsaWdodHM8L3RleHQ+PC9zdmc+" alt="Wedding Highlights"><div class="play-button">&#9654;</div></div><h4>Wedding Highlights</h4><p>Cinematic Wedding Film</p></div>
-                    <div class="video-item"><div class="video-placeholder"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NjAiIGhlaWdodD0iMzE1Ij48cmVjdCBmaWxsPSIjZjljYTI0IiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjMxNSIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjI4MCIgeT0iMTYyIj5CZWhpbmQgVGhlIFNjZW5lczwvdGV4dD48L3N2Zz4=" alt="Behind The Scenes"><div class="play-button">&#9654;</div></div><h4>Behind The Scenes</h4><p>Dance Class Documentary</p></div>
+        <section class="cta section">
+            <div class="container">
+                <h2 class="cta-title">Like What You See?</h2>
+                <p class="cta-text">Your story could be our next favourite project. Let's create something together.</p>
+                <div class="cta-actions">
+                    <a href="https://wa.me/919790825751?text=Hi%20M%C2%B2%20Studios!%20I%20loved%20your%20portfolio%20and%20want%20to%20work%20with%20you." target="_blank" rel="noopener" class="btn btn-primary btn-lg">WhatsApp Us</a>
+                    <a href="#contact" class="btn btn-outline btn-lg">Send an Enquiry</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="studio-gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Studio Gallery</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">Behind-the-scenes moments from our studio</p>
-            </div>
-            <div class="studio-gallery-grid">
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZmY2YjZiIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5EYW5jZSBTdHVkaW8gSW50ZXJpb3I8L3RleHQ+PC9zdmc+" alt="Dance Studio Interior"><div class="studio-overlay"><h4>Dance Studio Space</h4><p>State-of-the-art dance floors and mirrors</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjNGVjZGM0IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5DbGFzcyBpbiBTZXNzaW9uPC90ZXh0Pjwvc3ZnPg==" alt="Class in Session"><div class="studio-overlay"><h4>Class Moments</h4><p>Students learning and having fun</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZjljYTI0IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5QaG90b2dyYXBoeSBTZXR1cDwvdGV4dD48L3N2Zz4=" alt="Photography Setup"><div class="studio-overlay"><h4>Photography Setup</h4><p>Professional lighting and equipment</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjYTI5YmZlIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5SZWhlYXJzYWwgVGltZTwvdGV4dD48L3N2Zz4=" alt="Rehearsal Time"><div class="studio-overlay"><h4>Rehearsal Sessions</h4><p>Preparing for performances</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZmQ3OWE4IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5UZWFtIFBob3RvPC90ZXh0Pjwvc3ZnPg==" alt="Team Photo"><div class="studio-overlay"><h4>Our Team</h4><p>Meet our instructors and photographers</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjMDBiODk0IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5TdHVkZW50IFNob3djYXNlPC90ZXh0Pjwvc3ZnPg==" alt="Student Showcase"><div class="studio-overlay"><h4>Student Showcase</h4><p>Annual performance highlights</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjZTE3MDU1IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5Xb3Jrc2hvcCBTZXNzaW9uPC90ZXh0Pjwvc3ZnPg==" alt="Workshop Session"><div class="studio-overlay"><h4>Workshop Sessions</h4><p>Special training with guest choreographers</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjMDk4NGUzIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5QaG90byBTaG9vdDwvdGV4dD48L3N2Zz4=" alt="Photo Shoot"><div class="studio-overlay"><h4>Photo Shoot in Action</h4><p>Capturing perfect moments</p></div></div>
-                <div class="studio-gallery-item"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCBmaWxsPSIjNmM1Y2U3IiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiLz48dGV4dCBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjIwMCIgeT0iMTU1Ij5Bd2FyZCBDZXJlbW9ueTwvdGV4dD48L3N2Zz4=" alt="Award Ceremony"><div class="studio-overlay"><h4>Award Ceremonies</h4><p>Celebrating student achievements</p></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle">We'd love to hear from you! Reach out for inquiries, bookings, or just to say hello.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-form-container">
-                    <h3>Send Us a Message</h3>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group"><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="Enter your full name"></div>
-                        <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" name="email" required placeholder="your.email@example.com"></div>
-                        <div class="form-group"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required placeholder="+91 9790825751"></div>
-                        <div class="form-group"><label for="service">Service Interested In *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Select a service</option>
-                                <option value="dance-kids">Dance Classes - Kids</option>
-                                <option value="dance-teens">Dance Classes - Teens</option>
-                                <option value="dance-adults">Dance Classes - Adults</option>
-                                <option value="dance-workshop">Dance Workshops</option>
-                                <option value="wedding-choreography">Wedding Choreography</option>
-                                <option value="photography-wedding">Wedding Photography</option>
-                                <option value="photography-event">Event Photography</option>
-                                <option value="photography-portrait">Portrait Photography</option>
-                                <option value="photography-commercial">Commercial Photography</option>
-                                <option value="other">Other</option>
-                            </select>
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">Get in <span class="text-gold">Touch</span></h2>
+                    <p class="section-subtitle">Tell us what you need and we'll get back to you within a day.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                            <div class="contact-text"><h4>Call Us</h4><p>+91 97908 25751</p></div>
                         </div>
-                        <div class="form-group"><label for="message">Message *</label><textarea id="message" name="message" rows="5" required placeholder="Tell us about your requirements..."></textarea></div>
-                        <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                            <div class="contact-text"><h4>Visit Us</h4><p>Coimbatore, Tamil Nadu</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                            <div class="contact-text"><h4>Email</h4><p>m2studios.cbe@gmail.com</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg></div>
+                            <div class="contact-text"><h4>WhatsApp</h4><p>Fastest way to reach us</p></div>
+                        </div>
+                        <div class="contact-social">
+                            <a href="https://instagram.com/m2studios" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                            <a href="https://facebook.com/m2studios" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                            <a href="https://youtube.com/m2studios" target="_blank" rel="noopener" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                            <a href="https://wa.me/919790825751" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path></svg></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Name</label>
+                                <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="phone">Phone</label>
+                                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 ..." required autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="service">I'm interested in</label>
+                                <select class="form-select" id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Kids Dance">Kids Dance Classes</option>
+                                    <option value="Teen Dance">Teen Dance Programs</option>
+                                    <option value="Adult Dance">Adult Dance Classes</option>
+                                    <option value="Choreography">Professional Choreography</option>
+                                    <option value="Workshops">Workshops &amp; Masterclasses</option>
+                                    <option value="Wedding Photography">Wedding Photography</option>
+                                    <option value="Pre-Wedding">Pre-Wedding Shoot</option>
+                                    <option value="Event Photography">Event Photography</option>
+                                    <option value="Portraits">Portrait / Headshots</option>
+                                    <option value="Commercial">Commercial / Brand Shoot</option>
+                                    <option value="Event Services">Event Production</option>
+                                    <option value="Other">Something Else</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="message">Message</label>
+                            <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your event, dates, or what you'd like to achieve..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg form-submit" id="form-submit-btn">Send Enquiry</button>
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
                     </form>
-                    <div class="form-success" id="formSuccess" style="display: none;"><p>&#9989; Thank you! Your message has been sent successfully. We'll get back to you soon.</p></div>
-                </div>
-                <div class="contact-info-container">
-                    <h3>Contact Information</h3>
-                    <div class="contact-details">
-                        <div class="contact-item"><div class="contact-icon">&#128205;</div><div class="contact-text"><h4>Address</h4><p>M&#178; Studios<br>[Street Address]<br>[City, State - PIN Code]<br>India</p></div></div>
-                        <div class="contact-item"><div class="contact-icon">&#128222;</div><div class="contact-text"><h4>Phone</h4><p>+91 9790825751</p></div></div>
-                        <div class="contact-item"><div class="contact-icon">&#128231;</div><div class="contact-text"><h4>Email</h4><p>info@m2studios.com<br>bookings@m2studios.com</p></div></div>
-                        <div class="contact-item"><div class="contact-icon">&#128336;</div><div class="contact-text"><h4>Business Hours</h4><p>Monday - Saturday: 9:00 AM - 9:00 PM<br>Sunday: 10:00 AM - 6:00 PM</p></div></div>
-                    </div>
-                    <div class="social-media-section">
-                        <h4>Follow Us</h4>
-                        <div class="social-links-large">
-                            <a href="https://instagram.com/m2studios" target="_blank" class="social-link instagram"><span class="social-icon-large">&#128247;</span><span class="social-name">Instagram</span></a>
-                            <a href="https://facebook.com/m2studios" target="_blank" class="social-link facebook"><span class="social-icon-large">&#128225;</span><span class="social-name">Facebook</span></a>
-                            <a href="https://wa.me/919790825751" target="_blank" class="social-link whatsapp"><span class="social-icon-large">&#128172;</span><span class="social-name">WhatsApp</span></a>
-                            <a href="https://youtube.com/m2studios" target="_blank" class="social-link youtube"><span class="social-icon-large">&#127909;</span><span class="social-name">YouTube</span></a>
-                        </div>
-                    </div>
-                    <div class="quick-contact-buttons">
-                        <a href="tel:919790825751" class="btn btn-outline">Call Now</a>
-                        <a href="https://wa.me/919790825751" target="_blank" class="btn btn-whatsapp">WhatsApp Us</a>
-                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="map-section">
-        <div class="container"><h3>Find Us Here</h3></div>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8534!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="map-note"><p><strong>Note:</strong> Replace the Google Maps embed URL above with your actual studio location coordinates.</p></div>
-    </section>
+        </section>
+    </main>
 
     {{> footer}}
 </body>

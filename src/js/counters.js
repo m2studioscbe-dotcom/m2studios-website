@@ -1,29 +1,30 @@
-const statNumbers = document.querySelectorAll('.stat-item h4');
+const numbers = document.querySelectorAll('.stat-number[data-target]');
 
-const animateCounter = (element) => {
-    const target = parseInt(element.textContent.replace(/[^0-9]/g, ''));
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-    const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-            element.textContent = Math.floor(current) + '+';
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target + '+';
-        }
+if (numbers.length) {
+    const format = (n) => (n >= 1000 ? n.toLocaleString('en-IN') : String(n));
+
+    const animate = (el) => {
+        const target = parseInt(el.dataset.target, 10) || 0;
+        const duration = 1800;
+        const start = performance.now();
+
+        const step = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = format(Math.round(target * eased));
+            if (p < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
     };
-    updateCounter();
-};
 
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-            animateCounter(entry.target);
-            entry.target.classList.add('counted');
-        }
-    });
-}, { threshold: 0.5 });
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animate(entry.target);
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
 
-statNumbers.forEach(stat => { statsObserver.observe(stat); });
+    numbers.forEach(n => io.observe(n));
+}
