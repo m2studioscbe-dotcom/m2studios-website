@@ -11,3 +11,5 @@ import './form.js';
 import './faq.js';
 import './back-to-top.js';
 import './hero-canvas.js';
+import './tilt3d.js';
+import './three-gallery.js';
