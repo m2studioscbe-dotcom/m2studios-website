@@ -5,3 +5,4 @@ import '../css/sections.css';
 import '../css/responsive.css';
 import '../css/animations.css';
 import '../css/components.css';
+import '../css/three3d.css';
