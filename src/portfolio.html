@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{> head title="Portfolio | M&#178; Studios - Our Work in Dance &amp; Photography" metaDescription="Browse the M&#178; Studios portfolio - dance performances, weddings, portraits, events and studio work by Movementz Factory and Momentz Photography." canonical="https://m2studios-website.pages.dev/portfolio.html" ogImage="https://m2studios-website.pages.dev/images/og-cover.svg" ogType="website"}}
+    {{> head title="Portfolio | M&#178; Studios - Our Work in Dance &amp; Photography" metaDescription="Browse the M&#178; Studios portfolio - dance performances, weddings, portraits, events and studio work by Movementz Factory and Momentz Photography." canonical="https://m2studios-website.pages.dev/portfolio.html" ogImage="https://m2studios-website.pages.dev/images/og-cover.jpg" ogType="website"}}
 </head>
 <body class="page-portfolio">
     {{> header activePortfolio=true}}
@@ -22,7 +22,7 @@
                     <h2 class="section-title">Our Work, <span class="text-gold">In Depth</span></h2>
                     <p class="section-subtitle">Dance &amp; photography floating in a living 3D gallery - move your cursor to explore.</p>
                 </div>
-                <div class="showcase3d" id="showcase3d" data-images="/images/work/wedding-venue-decor.jpg,/images/work/dance-kids-admission.jpg,/images/work/prewedding-couple-outdoor.jpg,/images/work/dance-summer-camp-2026.jpg,/images/work/wedding-night-lighting.jpg,/images/work/dance-annual-program.jpg,/images/work/housewarming-harish-harini.jpg,/images/work/dance-batch-promos.jpg" role="img" aria-label="Interactive 3D gallery of M2 Studios dance and photography work">
+                <div class="showcase3d" id="showcase3d" data-images="/images/work/housewarming-night-lights.jpg,/images/work/dance-fest-performance.jpg,/images/work/wedding-venue-decor.jpg,/images/work/dance-stage-a.jpg,/images/work/night-venue-aerial.jpg,/images/work/housewarming-venue-interior.jpg,/images/work/prewedding-couple-outdoor.jpg,/images/work/dance-fest-competition.jpg" role="img" aria-label="Interactive 3D gallery of M2 Studios dance and photography work">
                     <span class="showcase3d-hint"><span class="dot"></span>Hover to explore</span>
                 </div>
             </div>
@@ -33,9 +33,9 @@
                 <div class="gallery-filters" id="gallery-filters" role="tablist" aria-label="Filter gallery">
                     <button class="filter-btn active" data-filter="all" type="button">All</button>
                     <button class="filter-btn" data-filter="wedding" type="button">Weddings</button>
+                    <button class="filter-btn" data-filter="housewarming" type="button">House Warming</button>
                     <button class="filter-btn" data-filter="event" type="button">Events &amp; Portraits</button>
-                    <button class="filter-btn" data-filter="dance" type="button">Dance Programs</button>
-                    <button class="filter-btn" data-filter="studio" type="button">Studio</button>
+                    <button class="filter-btn" data-filter="dance" type="button">Dance</button>
                 </div>
                 <div class="gallery-grid" id="gallery-grid">
                     <figure class="gallery-item" data-tilt data-category="wedding">
@@ -66,13 +66,65 @@
                         <img src="/images/work/wedding-venue-attendees.jpg" alt="Wedding venue entrance with decorated space and attendees" loading="lazy">
                         <figcaption class="gallery-overlay"><span class="gallery-category">Weddings</span><span class="gallery-title">Venue &amp; Guests</span></figcaption>
                     </figure>
+                    <figure class="gallery-item" data-tilt data-category="wedding">
+                        <img src="/images/work/night-venue-aerial.jpg" alt="Night venue illuminated with festive lights seen from the air" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Weddings</span><span class="gallery-title">Night Venue Aerial</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="housewarming">
+                        <img src="/images/work/housewarming-night-lights.jpg" alt="House warming venue glowing with string lights at night" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">House Warming</span><span class="gallery-title">Venue After Dark</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="housewarming">
+                        <img src="/images/work/housewarming-venue-interior.jpg" alt="House warming event hall interior with peacock wall art and seating" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">House Warming</span><span class="gallery-title">Venue Interior</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="housewarming">
+                        <img src="/images/work/housewarming-ceremony.jpg" alt="Family in traditional attire seated during the house warming ceremony" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">House Warming</span><span class="gallery-title">Ceremony &amp; Rituals</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="housewarming">
+                        <img src="/images/work/housewarming-harish-harini.jpg" alt="House warming ceremony photography for clients Harish and Harini" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">House Warming</span><span class="gallery-title">Client Coverage</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="event">
+                        <img src="/images/work/function-auditorium.jpg" alt="Audience gathered in an auditorium during a formal function" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Events</span><span class="gallery-title">Function Coverage</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="event">
+                        <img src="/images/work/birthday-family-group.jpg" alt="Birthday celebration family group under festive lights" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Events</span><span class="gallery-title">Birthday Celebration</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="event">
+                        <img src="/images/work/birthday-celebration.jpg" alt="Children near a birthday cake at an indoor celebration" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Events</span><span class="gallery-title">Cake &amp; Candles</span></figcaption>
+                    </figure>
                     <figure class="gallery-item" data-tilt data-category="event">
                         <img src="/images/work/prewedding-couple-outdoor.jpg" alt="Couple in traditional attire during an outdoor pre-wedding shoot" loading="lazy">
                         <figcaption class="gallery-overlay"><span class="gallery-category">Portraits</span><span class="gallery-title">Couple Shoot</span></figcaption>
                     </figure>
                     <figure class="gallery-item" data-tilt data-category="event">
-                        <img src="/images/work/housewarming-harish-harini.jpg" alt="House warming ceremony photography for clients Harish and Harini" loading="lazy">
-                        <figcaption class="gallery-overlay"><span class="gallery-category">Events</span><span class="gallery-title">House Warming</span></figcaption>
+                        <img src="/images/work/portrait-casual-red.jpg" alt="Studio style portrait of a man in a red shirt against a warm wall" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Portraits</span><span class="gallery-title">Casual Portrait</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="event">
+                        <img src="/images/work/portrait-outdoor-green.jpg" alt="Outdoor environmental portrait with an urban backdrop" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Portraits</span><span class="gallery-title">Outdoor Portrait</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="dance">
+                        <img src="/images/work/dance-fest-performance.jpg" alt="Dancers performing on stage at a district Dance Fest event" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Dance Fest Performance</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="dance">
+                        <img src="/images/work/dance-fest-competition.jpg" alt="Young dancers backstage at the DANCE FEAST district competition" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">DANCE FEAST Competition</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="dance">
+                        <img src="/images/work/dance-stage-a.jpg" alt="Students at Movementz Factory dance studio during a session" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Studio Session</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-tilt data-category="dance">
+                        <img src="/images/work/dance-training-b.jpg" alt="Kids rehearsing a dance routine inside the Movementz Factory studio" loading="lazy">
+                        <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Routine Rehearsal</span></figcaption>
                     </figure>
                     <figure class="gallery-item" data-tilt data-category="dance">
                         <img src="/images/work/dance-kids-admission.jpg" alt="Movementz Factory kids dance admission program flyer" loading="lazy">
@@ -90,13 +142,6 @@
                         <img src="/images/work/dance-summer-camp-2026.jpg" alt="Movementz Factory Summer Dance Camp 2026 flyer for kids and teens" loading="lazy">
                         <figcaption class="gallery-overlay"><span class="gallery-category">Dance</span><span class="gallery-title">Summer Camp 2026</span></figcaption>
                     </figure>
-                    <figure class="gallery-item content-required" data-category="studio" aria-label="Studio photos required - coming soon">
-                        <div class="gallery-placeholder">
-                            <span class="gallery-category">Studio</span>
-                            <span class="gallery-title">Studio Photos - Content Required</span>
-                            <p class="gallery-note">We're collecting real shots of our dance floor and studio. Follow us on Instagram to see them first.</p>
-                        </div>
-                    </figure>
                 </div>
             </div>
         </section>
@@ -110,13 +155,15 @@
                 </div>
                 <div class="grid grid-3">
                     <a href="https://instagram.com/the_movementz_factory" target="_blank" rel="noopener" class="video-card reveal" data-tilt>
-                        <div class="video-thumb"><img src="/images/dance-stage.svg" alt="Showcase performance video" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></span></div>
+                        <div class="video-thumb"><img src="/images/work/dance-workshop-b.jpg" alt="Movementz Factory showcase performance video" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></span></div>
                         <div class="video-meta"><span class="video-tag">Reel</span><h3 class="video-title">Showcase Highlights</h3></div>
                     </a>
-                    <a href="#" aria-disabled="true" class="video-card reveal is-soon" aria-label="Choreography film - coming soon" title="YouTube - coming soon">
-                        <div class="video-thumb"><img src="/images/dance-choreo.svg" alt="Choreography video" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></span></div>
-                        <div class="video-meta"><span class="video-tag">Choreo</span><h3 class="video-title">Choreography Film - Coming Soon</h3></div>
-                    </a>
+                    <div class="video-card reveal" data-tilt>
+                        <div class="video-thumb video-thumb--embed">
+                            <video src="/images/work/dance-showcase.mp4" poster="/images/work/dance-stage-a.jpg" controls playsinline preload="none" aria-label="Movementz Factory dance workshop performance clip"></video>
+                        </div>
+                        <div class="video-meta"><span class="video-tag">Clip</span><h3 class="video-title">Workshop Performance</h3></div>
+                    </div>
                     <a href="https://instagram.com/m2_studios_events" target="_blank" rel="noopener" class="video-card reveal" data-tilt>
                         <div class="video-thumb"><img src="/images/work/wedding-celebration-night.jpg" alt="Wedding highlight film thumbnail" loading="lazy"><span class="video-play"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></span></div>
                         <div class="video-meta"><span class="video-tag">Film</span><h3 class="video-title">Wedding Highlight</h3></div>
