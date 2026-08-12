@@ -111,6 +111,18 @@
 
 .video-card:hover .video-title { color: var(--gold); }
 
+.video-thumb--embed { background: #000; }
+.video-thumb--embed::after { display: none; }
+.video-thumb--embed video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+.video-thumb--embed video::-webkit-media-controls-panel { background-image: linear-gradient(180deg, transparent, rgba(0,0,0,0.6)); }
+
+
 .lightbox {
   position: fixed;
   inset: 0;
