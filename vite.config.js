@@ -12,6 +12,8 @@ export default defineConfig({
         'index': resolve(__dirname, 'src/index.html'),
         'services': resolve(__dirname, 'src/services.html'),
         'portfolio': resolve(__dirname, 'src/portfolio.html'),
+        'movementz': resolve(__dirname, 'src/movementz.html'),
+        'momentz': resolve(__dirname, 'src/momentz.html'),
       },
       output: {
         entryFileNames: 'assets/js/[name]-[hash].js',
