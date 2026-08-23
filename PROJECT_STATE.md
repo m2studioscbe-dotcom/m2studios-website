@@ -68,7 +68,25 @@ The project currently has multiple technical states. Do not treat them as interc
    - Path: `C:\Users\MSI\Documents\Desktop\M2_Studios_Website-routes`
    - Branch: `fix/movementz-momentz-routes`
    - Based on the Phase 1 continuity branch.
-   - Source route implementation commit: `29f760f`.
+   - Initial source route implementation commit: `29f760f`.
+   - Latest verified site implementation and synchronized-artifact commit: `b7ea397`.
+   - Deployment status: **NOT DEPLOYED**.
+
+## Route correction status — 2026-08-24
+
+- Branch: `fix/movementz-momentz-routes`.
+- Verified correction commits: source and route behavior `4237cbc`; synchronized root media `4d9131c`; production-equivalent root artifacts `b7ea397`.
+- The mobile Services trigger now opens its submenu on the first tap, keeps Movementz and Momentz links usable, reports `aria-expanded` state, closes on Escape, and preserves the desktop hover/link behavior.
+- Movementz now uses `dance-fest-performance.jpg` as its real hero, presents a page-specific dance-class WhatsApp CTA above the fold, removes outdated/poster-heavy media from the live route, and accurately treats `dance-stage-a.jpg` as studio training.
+- Momentz keeps a restrained typography-led hero with a page-specific photography WhatsApp CTA. The two housewarming/event images are no longer categorized as weddings, and the rotated portrait is no longer used on the route.
+- On the two brand routes at mobile widths, the overlapping floating icon stack is removed in favor of immediately visible, labelled WhatsApp and call actions in the hero. Desktop floating controls are unchanged.
+- Website-ready derivatives were added without changing any master original:
+  - `dance-workshop-upright.jpg` — 90-degree counter-clockwise orientation correction from `dance-workshop-b.jpg`.
+  - `movementz-showreel-group.jpg` — frame at `00:00:20` from `D:\M2-Master-Media-Library\02_MOVEMENTZ_FACTORY\15_BTS\movementz-showreel-edit.mp4`.
+  - `movementz-showreel-duet.jpg` — frame at `00:00:35` from the same showreel master.
+  - `movementz-dance-fest-team.jpg` — frame at `00:00:04` from `D:\M2-Master-Media-Library\02_MOVEMENTZ_FACTORY\16_All_Copied\performances_003.mp4`.
+- Remaining media gaps: Momentz still lacks an approved dedicated premium hero photograph; the typography-led treatment is intentional until stronger authentic media exists. Movementz still relies on a limited approved photo set and one service illustration, so a future real-media refresh can further reduce repetition.
+- Production build passed with all five page entries. Playwright verification passed at 1920×1080 and 375×812 for `/`, `/services.html`, `/portfolio.html`, `/movementz.html`, and `/momentz.html`: HTTP 200, no route console/page errors or failed requests, no broken image responses, no horizontal overflow, valid WhatsApp numbers, visible route-specific hero actions, and working mobile submenu behavior. Local `/admin/` returned HTTP 200 through the documented Vite fallback. Local `/editor/` returned HTTP 200 with the pre-existing external `grapesjs-preset-webpage` stylesheet failure; this correction pass did not change editor files.
 
 ## Current production architecture
 
@@ -310,7 +328,7 @@ Any score must link to its evidence and calculation. This file does not assign b
 
 ## Immediate next technical action
 
-Review the `fix/movementz-momentz-routes` branch, then merge and deploy it only with explicit approval. After Cloudflare reports a successful deployment, repeat the desktop/mobile browser checks against production and confirm the two URLs no longer return homepage content.
+Perform final human review of `fix/movementz-momentz-routes`. Merge and deploy only with separate explicit approval. After Cloudflare reports a successful deployment, repeat the desktop/mobile browser checks against production and confirm the two URLs no longer return homepage content.
 
 ## Continuation protocol
 
