@@ -64,6 +64,12 @@ The project currently has multiple technical states. Do not treat them as interc
    - Branch: `docs/phase1-project-state`
    - Based directly on `origin/main` at `f90c8eda`.
 
+5. **Movementz/Momentz route worktree**
+   - Path: `C:\Users\MSI\Documents\Desktop\M2_Studios_Website-routes`
+   - Branch: `fix/movementz-momentz-routes`
+   - Based on the Phase 1 continuity branch.
+   - Source route implementation commit: `29f760f`.
+
 ## Current production architecture
 
 ### Build and frontend
@@ -73,13 +79,15 @@ The project currently has multiple technical states. Do not treat them as interc
 - `src/index.html` — homepage source.
 - `src/services.html` — services source.
 - `src/portfolio.html` — portfolio/contact source.
+- `src/movementz.html` — dedicated Movementz Factory source on the route feature branch.
+- `src/momentz.html` — dedicated Momentz Photography source on the route feature branch.
 - `src/partials/` — shared header, head, and footer templates.
 - `src/css/` — modular source styles.
 - `src/js/` — modular behavior including navigation, motion, gallery, form, and Three.js effects.
 - `public/` — passthrough static assets copied into the Vite build.
 - Root `index.html`, `services.html`, `portfolio.html`, `assets/`, `images/`, `styles.css`, and `script.js` are synchronized production artifacts. Confirm the deployment contract before changing or removing these duplicates.
 
-The current Vite input list contains only homepage, services, and portfolio. Dedicated Movementz and Momentz pages are not included.
+The production baseline Vite input list contains only homepage, services, and portfolio. The route feature branch adds explicit Movementz and Momentz inputs, bringing the total to five.
 
 ### Backend and integrations
 
@@ -122,7 +130,7 @@ Current operational status of n8n, GitHub OAuth, save/load/deploy workflows, and
 
 ### Critical
 
-- Dedicated Movementz and Momentz production routes are missing from the Vite build and currently fall back to the homepage.
+- Dedicated Movementz and Momentz routes still fall back to the homepage in production until the verified route feature branch is reviewed, merged, and deployed.
 - The dirty local Eleventy migration does not build and must not be deployed.
 - `admin/config.yml` appears syntactically invalid because `repo` is over-indented beneath `name`.
 - Mutation endpoints (`save`, `deploy`, and AI generation) do not show an authorization gate and return permissive `Access-Control-Allow-Origin: *` headers.
@@ -209,6 +217,14 @@ Verified on 2026-08-24 from commit `f90c8eda`:
 - Vite reported a chunk-size warning for the approximately 734 kB uncompressed Three.js module.
 - `npm ci`/`npm audit` reported one high-severity transitive `nanoid` advisory (`GHSA-2v37-7h3g-55p8`). A fix is available, but do not run an automatic dependency fix without a separate tested task.
 
+Verified on 2026-08-24 from route source commit `29f760f`:
+
+- `npm ci` completed from the committed lockfile.
+- `npm run build` passed with Vite 6.4.3.
+- Output contained `index.html`, `services.html`, `portfolio.html`, `movementz.html`, and `momentz.html`.
+- Both dedicated routes use verified local M² media and contain no generated representations of students, clients, or results.
+- Vite retained the existing approximately 734 kB uncompressed Three.js chunk warning.
+
 ### Latest Playwright baseline verification
 
 Verified on 2026-08-24 at desktop 1920×1080 and mobile 375×812:
@@ -222,6 +238,8 @@ Verified on 2026-08-24 at desktop 1920×1080 and mobile 375×812:
 - Verification did **not** pass the complete `PROJECT_RULES.md` gate because of empty `#` links, encoded titles, editor resource failures, and the local `/admin/` fallback.
 
 These are baseline defects to fix in separate feature tasks. This documentation branch must not be merged while claiming a clean production verification pass.
+
+Route-specific Playwright verification on 2026-08-24 passed for `/movementz.html` and `/momentz.html` at desktop 1920×1080 and mobile 375×812. Both returned HTTP 200 with correct titles and H1 headings, working mobile navigation, no active placeholder links, no broken images, no request failures, and no console or page errors. This is local feature-branch evidence, not production deployment evidence.
 
 ## Deployment
 
@@ -273,7 +291,7 @@ Any score must link to its evidence and calculation. This file does not assign b
 ## Known blockers
 
 1. Local and remote repositories are divergent.
-2. Dedicated Movementz and Momentz production routes are absent.
+2. Dedicated Movementz and Momentz production routes remain absent until the verified feature branch is merged and deployed.
 3. Admin/CMS configuration and mutation-endpoint security require repair.
 4. Production integrations lack current end-to-end verification.
 5. Notion Mission Control has not yet become the operational source of truth.
@@ -287,20 +305,12 @@ Any score must link to its evidence and calculation. This file does not assign b
 - A clean feature worktree was created from current `origin/main` without modifying the legacy dirty worktree.
 - The production Vite baseline was installed from its lockfile and built successfully; it generated exactly three website pages.
 - This continuity file was created on `docs/phase1-project-state`.
+- Dedicated Movementz and Momentz source pages were added on `fix/movementz-momentz-routes` with explicit Vite inputs, navigation/footer links, sitemap entries, and synchronized root deployment artifacts.
+- Route-specific desktop/mobile Playwright verification passed before and after the source commit.
 
 ## Immediate next technical action
 
-Create a dedicated feature branch from the production baseline to restore dedicated Movementz and Momentz routes in the Vite source and build inputs.
-
-That task must:
-
-1. preserve the homepage, services, portfolio, Functions, editor, and admin;
-2. use the real media mapping rather than placeholders;
-3. add or restore explicit Vite inputs for Movementz and Momentz;
-4. build successfully;
-5. run desktop/mobile browser verification;
-6. report broken links, images, console errors, form behavior, and production deployment status;
-7. update this file and the matching Notion task when complete.
+Review the `fix/movementz-momentz-routes` branch, then merge and deploy it only with explicit approval. After Cloudflare reports a successful deployment, repeat the desktop/mobile browser checks against production and confirm the two URLs no longer return homepage content.
 
 ## Continuation protocol
 
