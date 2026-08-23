@@ -86,6 +86,30 @@
   .page-title { font-size: clamp(var(--text-2xl), 8vw, var(--text-4xl)); }
   .page-subtitle { font-size: var(--text-base); }
 
+  .page-brand .page-header-actions {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: var(--space-6);
+  }
+
+  .page-brand .page-header-actions .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .page-movementz .page-header {
+    min-height: 640px;
+    background:
+      linear-gradient(180deg, rgba(3,3,3,0.75), rgba(3,3,3,0.58) 46%, rgba(3,3,3,0.9)),
+      url('/images/work/dance-fest-performance.jpg') 48% center / cover no-repeat;
+  }
+
+  .page-momentz .page-header { min-height: 520px; }
+
+  .page-brand .floating-cta { display: none; }
+
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .container { padding: 0 var(--space-4); }
 
