@@ -13,3 +13,7 @@ import './back-to-top.js';
 import './hero-canvas.js';
 import './tilt3d.js';
 import './three-gallery.js';
+
+if (document.body.classList.contains('page-movementz')) {
+  import('./movementz-experience.js');
+}
