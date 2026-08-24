@@ -1,18 +1,23 @@
 import './styles.js';
 import './loading.js';
 import './menu.js';
-import './scroll.js';
-import './cursor.js';
+if (!document.body.classList.contains('page-v2')) import('./cursor.js');
 import './counters.js';
-import './animations.js';
 import './testimonial.js';
 import './gallery.js';
 import './form.js';
 import './faq.js';
 import './back-to-top.js';
-import './hero-canvas.js';
-import './tilt3d.js';
-import './three-gallery.js';
+if (document.getElementById('hero-canvas')) import('./hero-canvas.js');
+if (document.querySelector('[data-tilt]')) import('./tilt3d.js');
+if (document.getElementById('showcase3d')) import('./three-gallery.js');
+
+if (document.body.classList.contains('page-v2')) {
+  import('./v2-experience.js');
+} else {
+  import('./scroll.js');
+  import('./animations.js');
+}
 
 if (document.body.classList.contains('page-movementz')) {
   import('./movementz-experience.js');

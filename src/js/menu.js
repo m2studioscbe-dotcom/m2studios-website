@@ -25,6 +25,7 @@ if (toggle && nav) {
         toggle.classList.toggle('active', isOpen);
         toggle.setAttribute('aria-expanded', String(isOpen));
         document.body.style.overflow = isOpen ? 'hidden' : '';
+        if (isOpen) nav.querySelector('.nav-link')?.focus();
     });
 
     dropdownLinks.forEach(link => {
@@ -51,6 +52,13 @@ if (toggle && nav) {
 
     nav.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
+            closeMenu();
+            toggle.focus();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('open')) {
             closeMenu();
             toggle.focus();
         }

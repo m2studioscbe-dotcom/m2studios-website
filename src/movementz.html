@@ -1,106 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{> head title="Movementz Factory | Dance Classes in Coimbatore" metaDescription="Explore Movementz Factory dance classes, choreography, workshops and stage training for kids, teens and adults in Coimbatore." canonical="https://m2studios-website.pages.dev/movementz.html" ogImage="https://m2studios-website.pages.dev/images/work/movementz-performances-009-00m36s000-desktop-hero.jpg" ogType="website"}}
+    {{> head title="Movementz Factory | Dance Classes in Coimbatore" metaDescription="Explore Movementz Factory dance classes, choreography, workshops and performance training for kids and adults in Coimbatore." canonical="https://m2studios-website.pages.dev/movementz.html" ogImage="https://m2studios-website.pages.dev/images/work/movementz-performances-009-00m36s000-desktop-hero.jpg" ogType="website"}}
 </head>
-<body class="page-services page-brand page-movementz">
+<body class="page-services page-brand page-movementz page-v2 page-movementz-v2">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     {{> header activeMovementz=true}}
-
-    <main>
-        <section class="movementz-hero" aria-labelledby="movementz-hero-title">
-            <picture class="movementz-hero-media">
+    <main id="main-content">
+        <section class="mv2-hero" aria-labelledby="mv2-title">
+            <picture class="mv2-hero-media">
                 <source media="(max-width: 767px)" srcset="/images/work/movementz-showreel-00m12s000-mobile-hero.jpg">
                 <img src="/images/work/movementz-performances-009-00m36s000-desktop-hero.jpg" alt="Movementz dancers performing a group routine under blue stage lights" width="1920" height="1080" fetchpriority="high">
             </picture>
-            <div class="movementz-hero-shade" aria-hidden="true"></div>
-            <div class="container movementz-hero-inner">
-                <div class="movementz-hero-copy">
-                    <span class="movementz-kicker">Movementz Factory · Coimbatore</span>
-                    <h1 id="movementz-hero-title">Train with purpose.<br><span>Perform with confidence.</span></h1>
-                    <p>Dance classes, workshops, choreography and real stage preparation for kids and adults.</p>
-                    <div class="movementz-hero-actions">
-                        <a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20book%20a%20dance%20trial.%20Please%20help%20me%20choose%20a%20class." target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Trial</a>
-                        <a href="#movementz-classes" class="btn btn-secondary btn-lg">Explore Classes</a>
-                    </div>
-                    <div class="movementz-quick-actions" aria-label="Contact Movementz Factory">
-                        <a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20know%20about%20dance%20classes." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .2 5.3.2 11.9c0 2.1.6 4.2 1.6 6L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.5 0 11.8-5.3 11.8-11.9 0-3.2-1.2-6.2-3.5-8.4Zm-8.3 18.3a9.9 9.9 0 0 1-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a10 10 0 1 1 8.4 4.6Zm5.5-7.5c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-1.8-.9-3-1.6-4.2-3.7-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.6l-.9-2.1c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.6.1-.8.4-.3.3-1.1 1.1-1.1 2.7 0 1.6 1.2 3.1 1.3 3.3.2.2 2.3 3.5 5.5 4.9 2.1.9 2.9 1 3.9.9 1.2-.2 1.8-.9 2-1.8.2-.9.2-1.6.1-1.8-.2-.3-.4-.4-.7-.5Z"/></svg>WhatsApp</a>
-                        <a href="tel:+919790825751"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.2 1l-2.3 2.2Z"/></svg>Call the Studio</a>
+            <div class="mv2-hero-shade" aria-hidden="true"></div>
+            <div class="v2-shell mv2-hero-grid">
+                <div class="mv2-hero-copy">
+                    <span class="v2-kicker">Movementz Factory · Coimbatore</span>
+                    <h1 id="mv2-title"><span>Move.</span><span>Perform.</span><em>Become.</em></h1>
+                    <p>Training that travels from the studio floor to the stage.</p>
+                    <div class="v2-primary-actions">
+                        <button class="v2-action v2-action--gold" type="button" data-enquiry-open="movementz-enquiry">Book a Trial <span aria-hidden="true">→</span></button>
+                        <a class="v2-action v2-action--ghost" href="#classes">Explore Classes</a>
                     </div>
                 </div>
+                <div class="mv2-hero-note"><span>Real Movementz performance media</span><strong>Verified frame<br>00:00:36.000</strong></div>
             </div>
-            <a class="movementz-hero-scroll" href="#movementz-classes" aria-label="Go to Movementz classes"><span>Classes</span><i aria-hidden="true"></i></a>
+            <a class="mv2-scroll" href="#classes"><span>Choose your movement</span><i aria-hidden="true"></i></a>
         </section>
 
-        <section id="movementz-classes" class="movementz-section movementz-services" aria-labelledby="movementz-services-title">
-            <div class="container">
-                <div class="movementz-section-heading reveal">
-                    <div><span class="movementz-eyebrow">Choose your movement</span><h2 id="movementz-services-title">Find the right way to <span>start.</span></h2></div>
-                    <p>Select a program for the essentials, then ask us for current batches and availability.</p>
-                </div>
-                <div class="movementz-selector" data-movementz-selector>
-                    <div class="movementz-tabs" role="tablist" aria-label="Movementz programs">
-                        <button id="tab-kids" class="movementz-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="panel-kids" tabindex="0" data-service-tab="kids">Kids Dance</button>
-                        <button id="tab-adults" class="movementz-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-adults" tabindex="-1" data-service-tab="adults">Adults Dance</button>
-                        <button id="tab-zumba" class="movementz-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-zumba" tabindex="-1" data-service-tab="zumba">Zumba</button>
-                        <button id="tab-workshops" class="movementz-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-workshops" tabindex="-1" data-service-tab="workshops">Workshops</button>
-                        <button id="tab-choreography" class="movementz-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-choreography" tabindex="-1" data-service-tab="choreography">Choreography</button>
-                        <button id="tab-performance" class="movementz-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-performance" tabindex="-1" data-service-tab="performance">Performance Training</button>
+        <section id="classes" class="mv2-services" aria-labelledby="mv2-services-title">
+            <div class="v2-shell">
+                <header class="mv2-heading" data-v2-reveal><span class="v2-kicker">Choose your movement</span><h2 id="mv2-services-title">Not a list.<br><em>A way in.</em></h2><p>Select the experience that fits, then shape a trial with the studio.</p></header>
+                <div id="class-selector" class="mv2-selector" data-v2-selector>
+                    <div class="mv2-service-rail" role="tablist" aria-label="Movementz classes">
+                        <button class="mv2-service-tab is-active" id="mv2-tab-kids" type="button" role="tab" aria-selected="true" aria-controls="mv2-panel-kids" data-v2-tab="kids"><span>01</span> Kids Dance</button>
+                        <button class="mv2-service-tab" id="mv2-tab-adults" type="button" role="tab" aria-selected="false" aria-controls="mv2-panel-adults" data-v2-tab="adults"><span>02</span> Adults Dance</button>
+                        <button class="mv2-service-tab" id="mv2-tab-zumba" type="button" role="tab" aria-selected="false" aria-controls="mv2-panel-zumba" data-v2-tab="zumba"><span>03</span> Zumba</button>
+                        <button class="mv2-service-tab" id="mv2-tab-workshops" type="button" role="tab" aria-selected="false" aria-controls="mv2-panel-workshops" data-v2-tab="workshops"><span>04</span> Workshops</button>
+                        <button class="mv2-service-tab" id="mv2-tab-choreo" type="button" role="tab" aria-selected="false" aria-controls="mv2-panel-choreo" data-v2-tab="choreo"><span>05</span> Choreography</button>
+                        <button class="mv2-service-tab" id="mv2-tab-performance" type="button" role="tab" aria-selected="false" aria-controls="mv2-panel-performance" data-v2-tab="performance"><span>06</span> Performance Training</button>
                     </div>
-                    <div class="movementz-service-panels">
-                        <article id="panel-kids" class="movementz-service-panel is-active" role="tabpanel" aria-labelledby="tab-kids" data-service-panel="kids">
-                            <div class="movementz-service-media"><img src="/images/work/movementz-activity-training-003-00m01s837.jpg" alt="An instructor guiding children during a Movementz studio activity" width="1920" height="1080" loading="lazy"></div>
-                            <div class="movementz-service-copy"><span class="movementz-service-count">01 / 06</span><h3>Kids Dance</h3><p>Age-appropriate movement, rhythm and group routines that help young dancers learn with confidence.</p><dl><div><dt>For</dt><dd>Children and young beginners</dd></div><div><dt>Current batches</dt><dd>Confirm timings with the studio</dd></div><div><dt>Next step</dt><dd>Ask to book a suitable trial</dd></div></dl><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27m%20interested%20in%20a%20Kids%20Dance%20trial.%20Please%20share%20the%20current%20batch%20details." target="_blank" rel="noopener" class="btn btn-primary">Ask About This Class</a></div>
+                    <div class="mv2-service-stage">
+                        <article id="mv2-panel-kids" class="mv2-service-panel is-active" role="tabpanel" aria-labelledby="mv2-tab-kids" data-v2-panel="kids">
+                            <img src="/images/work/movementz-activity-training-003-00m01s837.jpg" alt="An instructor guiding children during a Movementz studio activity" width="1920" height="1080" loading="lazy">
+                            <div><small>For children &amp; young beginners</small><h3>Start with rhythm.<br>Build real confidence.</h3><p>Age-appropriate movement, musicality and group routines in a supportive studio setting.</p><button type="button" class="v2-text-link" data-enquiry-open="movementz-enquiry" data-enquiry-service="Kids Dance">Ask about this class <span aria-hidden="true">→</span></button></div>
                         </article>
-                        <article id="panel-adults" class="movementz-service-panel" role="tabpanel" aria-labelledby="tab-adults" data-service-panel="adults">
-                            <div class="movementz-service-media"><img src="/images/work/movementz-adult-workshop-061-00m07s776.jpg" alt="Adults rehearsing together during a Movementz studio session" width="1920" height="1080" loading="lazy"></div>
-                            <div class="movementz-service-copy"><span class="movementz-service-count">02 / 06</span><h3>Adults Dance</h3><p>A welcoming route into dance for adults starting fresh, returning to movement or learning a routine.</p><dl><div><dt>For</dt><dd>Adult beginners and returning dancers</dd></div><div><dt>Current batches</dt><dd>Confirm timings with the studio</dd></div><div><dt>Next step</dt><dd>Ask for a suitable class or trial</dd></div></dl><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27m%20interested%20in%20an%20Adults%20Dance%20class.%20Please%20share%20the%20current%20batch%20details." target="_blank" rel="noopener" class="btn btn-primary">Ask About This Class</a></div>
+                        <article id="mv2-panel-adults" class="mv2-service-panel" role="tabpanel" aria-labelledby="mv2-tab-adults" data-v2-panel="adults">
+                            <img src="/images/work/movementz-adult-workshop-061-00m07s776.jpg" alt="Adults rehearsing together during a Movementz studio session" width="1920" height="1080" loading="lazy">
+                            <div><small>For adult beginners &amp; returning dancers</small><h3>Begin now.<br>Move without apology.</h3><p>A welcoming route into dance for fitness, expression and learning a routine.</p><button type="button" class="v2-text-link" data-enquiry-open="movementz-enquiry" data-enquiry-service="Adults Dance">Ask about this class <span aria-hidden="true">→</span></button></div>
                         </article>
-                        <article id="panel-zumba" class="movementz-service-panel" role="tabpanel" aria-labelledby="tab-zumba" data-service-panel="zumba">
-                            <div class="movementz-service-media movementz-service-media--portrait"><img src="/images/work/movementz-showreel-00m09s000-support.jpg" alt="Movementz dancers moving together in the studio" width="1080" height="1920" loading="lazy"><span class="movementz-media-note">Adult dance visual · Zumba session media pending</span></div>
-                            <div class="movementz-service-copy"><span class="movementz-service-count">03 / 06</span><h3>Zumba</h3><p>Dance-led fitness for adults who want an energetic group session. Ask whether a current batch is open.</p><dl><div><dt>For</dt><dd>Adults seeking dance-based fitness</dd></div><div><dt>Availability</dt><dd>Confirm the current batch with the studio</dd></div><div><dt>Next step</dt><dd>Ask about joining or trying a session</dd></div></dl><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27m%20interested%20in%20Zumba.%20Is%20a%20current%20batch%20available%3F" target="_blank" rel="noopener" class="btn btn-primary">Ask About This Class</a></div>
+                        <article id="mv2-panel-zumba" class="mv2-service-panel" role="tabpanel" aria-labelledby="mv2-tab-zumba" data-v2-panel="zumba">
+                            <img src="/images/work/movementz-showreel-00m09s000-support.jpg" alt="Movementz dancers moving together in the studio" width="1080" height="1920" loading="lazy">
+                            <div><small>Adult dance visual · current Zumba media pending</small><h3>Energy first.<br>Fitness follows.</h3><p>Dance-led fitness in a lively group format. Current batch availability is confirmed directly.</p><button type="button" class="v2-text-link" data-enquiry-open="movementz-enquiry" data-enquiry-service="Zumba">Ask about Zumba <span aria-hidden="true">→</span></button></div>
                         </article>
-                        <article id="panel-workshops" class="movementz-service-panel" role="tabpanel" aria-labelledby="tab-workshops" data-service-panel="workshops">
-                            <div class="movementz-service-media"><img src="/images/work/dance-workshop-upright.jpg" alt="Participants learning together in a Movementz studio workshop" width="1080" height="1350" loading="lazy"></div>
-                            <div class="movementz-service-copy"><span class="movementz-service-count">04 / 06</span><h3>Workshops</h3><p>Focused sessions and special programs for exploring a style, sharpening technique or learning together.</p><dl><div><dt>For</dt><dd>New and current dancers, by session</dd></div><div><dt>Schedule</dt><dd>Announced workshops and seasonal programs</dd></div><div><dt>Next step</dt><dd>Ask about the next available workshop</dd></div></dl><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20know%20about%20your%20next%20dance%20workshop." target="_blank" rel="noopener" class="btn btn-primary">Ask About This Class</a></div>
+                        <article id="mv2-panel-workshops" class="mv2-service-panel" role="tabpanel" aria-labelledby="mv2-tab-workshops" data-v2-panel="workshops">
+                            <img src="/images/work/movementz-adult-workshop-061-00m07s776.jpg" alt="Adults learning choreography together at a Movementz workshop" width="1920" height="1080" loading="lazy">
+                            <div><small>Focused sessions &amp; special programs</small><h3>One room.<br>A new way to move.</h3><p>Time-bound sessions for exploring styles, sharpening technique and learning together.</p><button type="button" class="v2-text-link" data-enquiry-open="movementz-enquiry" data-enquiry-service="Workshops">Ask about workshops <span aria-hidden="true">→</span></button></div>
                         </article>
-                        <article id="panel-choreography" class="movementz-service-panel" role="tabpanel" aria-labelledby="tab-choreography" data-service-panel="choreography">
-                            <div class="movementz-service-media movementz-service-media--portrait"><img src="/images/work/movementz-showreel-00m18s000-community.jpg" alt="Movementz dancers rehearsing a group routine in the studio" width="1080" height="1920" loading="lazy"></div>
-                            <div class="movementz-service-copy"><span class="movementz-service-count">05 / 06</span><h3>Choreography</h3><p>Custom routines prepared for weddings, celebrations, cultural programs and group performances.</p><dl><div><dt>For</dt><dd>Individuals, families and groups</dd></div><div><dt>Format</dt><dd>Planned around your event and performers</dd></div><div><dt>Next step</dt><dd>Share your event and performance needs</dd></div></dl><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20discuss%20choreography%20for%20an%20event." target="_blank" rel="noopener" class="btn btn-primary">Ask About This Class</a></div>
+                        <article id="mv2-panel-choreo" class="mv2-service-panel" role="tabpanel" aria-labelledby="mv2-tab-choreo" data-v2-panel="choreo">
+                            <img src="/images/work/movementz-showreel-00m18s000-community.jpg" alt="Movementz dancers rehearsing a group routine in the studio" width="1080" height="1920" loading="lazy">
+                            <div><small>Weddings, celebrations &amp; group performances</small><h3>Your occasion.<br>Its own movement.</h3><p>Custom routines planned around your event, performers and available rehearsal time.</p><button type="button" class="v2-text-link" data-enquiry-open="movementz-enquiry" data-enquiry-service="Choreography">Discuss choreography <span aria-hidden="true">→</span></button></div>
                         </article>
-                        <article id="panel-performance" class="movementz-service-panel" role="tabpanel" aria-labelledby="tab-performance" data-service-panel="performance">
-                            <div class="movementz-service-media"><img src="/images/work/movementz-performances-007-00m12s000-performance.jpg" alt="Movementz dancers performing a synchronized stage routine" width="1920" height="1080" loading="lazy"></div>
-                            <div class="movementz-service-copy"><span class="movementz-service-count">06 / 06</span><h3>Performance / Competition Training</h3><p>Rehearsal-led preparation focused on group routines, stage awareness and confident performance.</p><dl><div><dt>For</dt><dd>Dancers preparing for stage opportunities</dd></div><div><dt>Format</dt><dd>Training depends on the performance or event</dd></div><div><dt>Next step</dt><dd>Ask about current training opportunities</dd></div></dl><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27m%20interested%20in%20performance%20or%20competition%20training.%20Please%20share%20the%20current%20options." target="_blank" rel="noopener" class="btn btn-primary">Ask About This Class</a></div>
+                        <article id="mv2-panel-performance" class="mv2-service-panel" role="tabpanel" aria-labelledby="mv2-tab-performance" data-v2-panel="performance">
+                            <img src="/images/work/movementz-performances-007-00m12s000-performance.jpg" alt="Movementz dancers performing a synchronized stage routine" width="1920" height="1080" loading="lazy">
+                            <div><small>Rehearsal-led stage preparation</small><h3>Train the detail.<br>Own the stage.</h3><p>Group routines, stage awareness and preparation for performance opportunities.</p><button type="button" class="v2-text-link" data-enquiry-open="movementz-enquiry" data-enquiry-service="Performance Training">Ask about training <span aria-hidden="true">→</span></button></div>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="movementz-section movementz-experience" aria-labelledby="movementz-experience-title">
-            <div class="container">
-                <div class="movementz-section-heading movementz-section-heading--light reveal"><div><span class="movementz-eyebrow">The real experience</span><h2 id="movementz-experience-title">From the studio<br>to the <span>stage.</span></h2></div><p>Authentic Movementz sessions, rehearsals and performances—the work and community behind every routine.</p></div>
-                <div class="movementz-experience-grid">
-                    <figure class="movementz-experience-card movementz-experience-card--lead reveal"><img src="/images/work/movementz-performances-009-00m40s000-support.jpg" alt="Movementz dance group performing under blue stage lights" width="1920" height="1080" loading="lazy"><figcaption><span>Perform</span> Real stage energy</figcaption></figure>
-                    <figure class="movementz-experience-card movementz-experience-card--portrait reveal"><img src="/images/work/movementz-showreel-00m18s000-community.jpg" alt="Movementz dancers rehearsing a group routine in the studio" width="1080" height="1920" loading="lazy"><figcaption><span>Practice</span> Studio teamwork</figcaption></figure>
-                    <figure class="movementz-experience-card movementz-experience-card--wide reveal"><img src="/images/work/movementz-adult-workshop-061-00m07s776.jpg" alt="Adults learning choreography together at a Movementz workshop" width="1920" height="1080" loading="lazy"><figcaption><span>Learn</span> Focused workshops</figcaption></figure>
-                </div>
+        <section id="experience" class="mv2-experience" aria-labelledby="mv2-experience-title">
+            <div class="v2-shell mv2-experience-head" data-v2-reveal><span class="v2-kicker">The work is visible</span><h2 id="mv2-experience-title">Studio energy.<br><em>Stage consequence.</em></h2></div>
+            <div id="experience-filmstrip" class="mv2-filmstrip" aria-label="Real Movementz experience">
+                <figure class="mv2-frame mv2-frame--wide" data-v2-reveal><img src="/images/work/movementz-performances-009-00m40s000-support.jpg" alt="Movementz group performing under blue stage lights" width="1920" height="1080" loading="lazy"><figcaption><span>01 · Perform</span>Stage energy</figcaption></figure>
+                <figure class="mv2-frame mv2-frame--portrait" data-v2-reveal><img src="/images/work/movementz-showreel-00m18s000-community.jpg" alt="Movementz dancers rehearsing a group routine in the studio" width="1080" height="1920" loading="lazy"><figcaption><span>02 · Practice</span>Studio teamwork</figcaption></figure>
+                <figure class="mv2-frame" data-v2-reveal><img src="/images/work/movementz-adult-workshop-061-00m07s776.jpg" alt="Adults learning choreography together at a Movementz workshop" width="1920" height="1080" loading="lazy"><figcaption><span>03 · Learn</span>Focused sessions</figcaption></figure>
+                <figure class="mv2-frame" data-v2-reveal><img src="/images/work/movementz-dance-fest-team.jpg" alt="Movementz dancers together at a dance festival" width="1920" height="1080" loading="lazy"><figcaption><span>04 · Belong</span>A real community</figcaption></figure>
             </div>
         </section>
 
-        <section class="movementz-proof" aria-labelledby="movementz-why-title">
-            <div class="container"><div class="movementz-proof-layout">
-                <div class="movementz-proof-copy reveal"><span class="movementz-eyebrow">Why Movementz</span><h2 id="movementz-why-title">More than learning steps.</h2><p>Movementz connects regular practice with workshops, choreography and opportunities to experience the stage.</p><ul class="movementz-trust-list"><li><strong>Different starting points</strong><span>Options for kids, adults and performance-focused dancers.</span></li><li><strong>Real performance experience</strong><span>Training can move from rehearsal into live stage settings.</span></li><li><strong>Workshops &amp; choreography</strong><span>Focused sessions and custom routines beyond regular classes.</span></li><li><strong>Learn together</strong><span>Group practice builds coordination, confidence and community.</span></li></ul></div>
-                <article class="movementz-achievement reveal"><div class="movementz-achievement-media"><img src="/images/work/movementz-performances-010-00m02s880-trophies.jpg" alt="Three dance trophies displayed at a Movementz event" width="1920" height="1080" loading="lazy"></div><div class="movementz-achievement-copy"><span>Achievement &amp; participation</span><h3>Practice with something to move toward.</h3><p>Real events and performance participation give dancers a visible reason to rehearse, grow and show up together.</p></div></article>
-            </div></div>
+        <section id="proof" class="mv2-proof" aria-labelledby="mv2-proof-title">
+            <div class="v2-shell mv2-proof-grid">
+                <div class="mv2-proof-copy" data-v2-reveal><span class="v2-kicker">Proof without invented numbers</span><h2 id="mv2-proof-title">The process<br><em>shows up.</em></h2><p>Movementz is built around instruction, rehearsal, group discipline and real performance opportunities—not brochure promises.</p></div>
+                <figure id="proof-visual" class="mv2-proof-visual" data-v2-reveal><img src="/images/work/movementz-performances-010-00m02s880-trophies.jpg" alt="Awards displayed during a Movementz stage event" width="1920" height="1080" loading="lazy"><figcaption><span>Achievement</span><strong>Work becomes<br>something visible.</strong></figcaption></figure>
+            </div>
+            <div class="mv2-proof-rail" aria-label="Movementz strengths"><span>Structured training</span><i aria-hidden="true"></i><span>Group discipline</span><i aria-hidden="true"></i><span>Stage preparation</span><i aria-hidden="true"></i><span>Choreography</span><i aria-hidden="true"></i><span>Community</span></div>
         </section>
 
-        <section class="movementz-final-cta" aria-labelledby="movementz-final-title">
-            <div class="movementz-final-media" aria-hidden="true"><img src="/images/work/movementz-performances-009-00m36s000-desktop-hero.jpg" alt="" width="1920" height="1080" loading="lazy"></div>
-            <div class="container"><div class="movementz-final-content reveal"><span class="movementz-eyebrow">Your first step</span><h2 id="movementz-final-title">Ready to find your class?</h2><p>Tell us who the class is for and what you are looking for. We’ll help you choose a suitable Movementz option.</p><div class="movementz-final-actions"><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20book%20a%20dance%20trial.%20Please%20help%20me%20choose%20a%20class." target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a Trial</a><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20Please%20help%20me%20choose%20a%20dance%20program." target="_blank" rel="noopener" class="btn btn-secondary btn-lg">WhatsApp Us</a></div></div></div>
+        <section id="trial" class="mv2-final" aria-labelledby="mv2-final-title">
+            <img src="/images/work/movementz-performances-009-00m40s000-support.jpg" alt="Movementz performers on stage under blue lighting" width="1920" height="1080" loading="lazy">
+            <div class="mv2-final-shade" aria-hidden="true"></div>
+            <div class="v2-shell mv2-final-copy" data-v2-reveal><span class="v2-kicker">Your first step is smaller than you think</span><h2 id="mv2-final-title">Start with<br><em>one trial.</em></h2><p>Choose a class, share your preferred timing and continue the conversation with the studio.</p><div class="v2-primary-actions"><button class="v2-action v2-action--gold" type="button" data-enquiry-open="movementz-enquiry">Configure a Trial <span aria-hidden="true">→</span></button><a class="v2-action v2-action--ghost" href="https://wa.me/919790825751" target="_blank" rel="noopener">WhatsApp Directly</a></div></div>
         </section>
     </main>
 
+    <dialog class="v2-enquiry" id="movementz-enquiry" data-enquiry-dialog aria-labelledby="movementz-enquiry-title" data-current-step="0">
+        <form method="dialog" novalidate>
+            <header><div><span>Movementz · Trial builder</span><h2 id="movementz-enquiry-title">Shape your first visit.</h2></div><button type="button" class="v2-enquiry-close" data-enquiry-close aria-label="Close trial builder">×</button></header>
+            <ol class="v2-step-dots" aria-label="Trial enquiry progress"><li class="is-active" data-step-dot aria-current="step">Class</li><li data-step-dot>Details</li><li data-step-dot>Continue</li></ol>
+            <section class="v2-enquiry-step is-active" data-enquiry-step><fieldset><legend>What are you looking for?</legend><div class="v2-choice-grid"><label><input type="radio" name="service" value="Kids Dance" required><span>Kids Dance</span></label><label><input type="radio" name="service" value="Adults Dance"><span>Adults Dance</span></label><label><input type="radio" name="service" value="Zumba"><span>Zumba</span></label><label><input type="radio" name="service" value="Workshops"><span>Workshops</span></label><label><input type="radio" name="service" value="Choreography"><span>Choreography</span></label><label><input type="radio" name="service" value="Performance Training"><span>Performance Training</span></label></div></fieldset><div class="v2-step-actions"><button class="v2-action v2-action--gold" type="button" data-enquiry-next>Continue <span aria-hidden="true">→</span></button></div></section>
+            <section class="v2-enquiry-step" data-enquiry-step hidden><div class="v2-field-grid"><label><span>Name</span><input type="text" name="name" autocomplete="name" required></label><label><span>Phone</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" required></label><label><span>Student age <small>(if relevant)</small></span><input type="text" name="age" inputmode="numeric"></label><label><span>Preferred timing</span><select name="timing" required><option value="">Choose one</option><option>Weekday</option><option>Weekend</option><option>Need guidance</option></select></label><label class="v2-field-wide"><span>Anything we should know?</span><textarea name="message" rows="3"></textarea></label></div><div class="v2-step-actions"><button class="v2-action v2-action--ghost" type="button" data-enquiry-back>Back</button><button class="v2-action v2-action--gold" type="button" data-enquiry-next>Review route <span aria-hidden="true">→</span></button></div></section>
+            <section class="v2-enquiry-step v2-enquiry-complete" data-enquiry-step hidden><span class="v2-complete-mark" aria-hidden="true">M²</span><h3>Ready to continue.</h3><p>Your entries remain only in this browser sheet and are not stored or sent. Continue to WhatsApp and share the details you choose with the studio.</p><div class="v2-step-actions"><button class="v2-action v2-action--ghost" type="button" data-enquiry-back>Back</button><a class="v2-action v2-action--gold" href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20book%20a%20trial." target="_blank" rel="noopener">Continue on WhatsApp <span aria-hidden="true">↗</span></a></div></section>
+        </form>
+    </dialog>
+
+    <div class="v2-mobile-actions" data-v2-mobile-actions><button type="button" data-enquiry-open="movementz-enquiry">Book a Trial</button><a href="https://wa.me/919790825751" target="_blank" rel="noopener">WhatsApp</a></div>
     {{> footer}}
-    <nav class="movementz-mobile-actions" aria-label="Movementz quick actions" data-movementz-mobile-actions><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20book%20a%20dance%20trial.%20Please%20help%20me%20choose%20a%20class." target="_blank" rel="noopener" class="movementz-mobile-trial">Book a Trial</a><a href="https://wa.me/919790825751?text=Hi%20Movementz%20Factory!%20I%27d%20like%20to%20know%20about%20dance%20classes." target="_blank" rel="noopener" class="movementz-mobile-whatsapp">WhatsApp Us</a></nav>
 </body>
 </html>
