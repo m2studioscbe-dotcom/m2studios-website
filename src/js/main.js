@@ -19,6 +19,20 @@ if (document.body.classList.contains('page-v2')) {
   import('./animations.js');
 }
 
-if (document.body.classList.contains('page-movementz')) {
+if (document.body.classList.contains('page-immersive-v3')) {
+  import('./page-transition.js');
+}
+
+if (document.body.classList.contains('page-m2-v2') && document.body.classList.contains('page-immersive-v3')) {
+  import('./immersive-home.js');
+}
+
+if (document.body.classList.contains('page-movementz') && document.body.classList.contains('page-immersive-v3')) {
+  import('./immersive-movementz.js');
+} else if (document.body.classList.contains('page-movementz')) {
   import('./movementz-experience.js');
+}
+
+if (document.body.classList.contains('page-momentz') && document.body.classList.contains('page-immersive-v3')) {
+  import('./immersive-momentz.js');
 }

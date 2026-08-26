@@ -129,6 +129,28 @@ dialogs.forEach((dialog) => {
   const form = dialog.querySelector('form');
   const steps = [...dialog.querySelectorAll('[data-enquiry-step]')];
   const dots = [...dialog.querySelectorAll('[data-step-dot]')];
+  const summary = dialog.querySelector('[data-enquiry-summary]');
+  const sendLink = dialog.querySelector('[data-enquiry-send]');
+  const fieldLabels = { service: 'Service', name: 'Name', phone: 'Phone', age: 'Student age', timing: 'Preferred timing', message: 'Note', date: 'Preferred date', location: 'Location', requirements: 'Requirements' };
+
+  const prepareWhatsAppEnquiry = () => {
+    if (!form || !sendLink) return;
+    const entries = [...new FormData(form).entries()].map(([key, value]) => [key, String(value).trim()]).filter(([, value]) => value);
+    const brand = dialog.dataset.enquiryBrand || 'M² Studios';
+    const intent = dialog.dataset.enquiryIntent || 'make an enquiry';
+    const phone = dialog.dataset.enquiryPhone || '919790825751';
+    const lines = [`Hi ${brand}! I'd like to ${intent}.`, '', ...entries.map(([key, value]) => `${fieldLabels[key] || key}: ${value}`)];
+    sendLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(lines.join('\n'))}`;
+    if (!summary) return;
+    summary.replaceChildren();
+    entries.forEach(([key, value]) => {
+      const term = document.createElement('dt');
+      const detail = document.createElement('dd');
+      term.textContent = fieldLabels[key] || key;
+      detail.textContent = value;
+      summary.append(term, detail);
+    });
+  };
 
   const showStep = (next) => {
     const safeStep = Math.max(0, Math.min(next, steps.length - 1));
@@ -141,6 +163,7 @@ dialogs.forEach((dialog) => {
       dot.setAttribute('aria-current', index === safeStep ? 'step' : 'false');
     });
     dialog.dataset.currentStep = String(safeStep);
+    if (safeStep === steps.length - 1) prepareWhatsAppEnquiry();
     steps[safeStep]?.querySelector('input, select, textarea, button')?.focus({ preventScroll: true });
   };
 
@@ -180,6 +203,13 @@ dialogs.forEach((dialog) => {
 
 const mobileActions = document.querySelector('[data-v2-mobile-actions]');
 const footer = document.querySelector('.footer');
+const primaryView = document.querySelector('[data-v2-primary-view]');
+if (mobileActions && primaryView && 'IntersectionObserver' in window) {
+  const primaryObserver = new IntersectionObserver(([entry]) => {
+    mobileActions.classList.toggle('is-before-primary-exit', entry.isIntersecting);
+  }, { threshold: 0.08 });
+  primaryObserver.observe(primaryView);
+}
 if (mobileActions && footer && 'IntersectionObserver' in window) {
   const footerObserver = new IntersectionObserver(([entry]) => {
     mobileActions.classList.toggle('is-docked-away', entry.isIntersecting);
