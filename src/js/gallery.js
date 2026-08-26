@@ -38,6 +38,11 @@ if (items.length) {
     const caption = lb.querySelector('.lightbox-caption');
     const prevBtn = lb.querySelector('.lightbox-prev');
     const nextBtn = lb.querySelector('.lightbox-next');
+    const initialSource = items[0].querySelector('img');
+    if (initialSource) {
+        img.src = initialSource.src;
+        img.alt = initialSource.alt || 'Selected portfolio preview';
+    }
     let current = 0;
 
     const visibleItems = () => Array.from(items).filter(i => i.style.display !== 'none');
