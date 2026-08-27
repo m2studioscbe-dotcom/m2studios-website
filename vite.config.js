@@ -1,6 +1,16 @@
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
+import { cpSync } from 'node:fs';
 import { resolve } from 'path';
+
+const copyAdminStatic = () => ({
+  name: 'copy-admin-static',
+  writeBundle() {
+    cpSync(resolve(__dirname, 'admin'), resolve(__dirname, 'dist/admin'), {
+      recursive: true,
+    });
+  },
+});
 
 export default defineConfig({
   root: 'src',
@@ -28,6 +38,7 @@ export default defineConfig({
       partialDirectory: resolve(__dirname, 'src/partials'),
       helpers: {},
     }),
+    copyAdminStatic(),
   ],
   server: {
     open: true,
