@@ -29,7 +29,43 @@
 .page-service-app p { margin-top: 0; }
 .page-service-app a { color: inherit; }
 .page-service-app img { display: block; max-width: 100%; }
-.page-service-app .floating-cta { display: none; }
+.page-service-app .floating-cta {
+  display: flex;
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1100;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+.page-service-app .floating-btn {
+  width: auto;
+  min-width: 132px;
+  height: 48px;
+  padding: 0 16px;
+  gap: 10px;
+  border: 1px solid rgba(216, 176, 95, .42);
+  border-radius: 999px;
+  background: rgba(20, 18, 15, .92);
+  color: var(--app-paper);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, .36);
+  backdrop-filter: blur(14px);
+  font-size: .82rem;
+  font-weight: 650;
+  letter-spacing: .01em;
+  text-decoration: none;
+}
+.page-service-app .floating-btn::after { content: "Call"; }
+.page-service-app .floating-btn.whatsapp::after { content: "WhatsApp"; }
+.page-service-app .floating-btn svg { width: 18px; height: 18px; }
+.page-service-app .floating-btn.whatsapp {
+  border-color: rgba(255, 255, 255, .18);
+  background: #178b50;
+  color: #fff;
+}
+.page-service-app .floating-btn:hover,
+.page-service-app .floating-btn:focus-visible { transform: translateY(-2px); }
 
 .app-shell {
   width: min(1240px, calc(100% - 48px));
@@ -372,7 +408,7 @@
     z-index: 1200;
     inset: auto 10px 10px;
     display: grid;
-    grid-template-columns: 1fr 1.35fr 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 5px;
     padding: 6px;
     border: 1px solid rgba(244,239,229,.14);
@@ -382,8 +418,10 @@
     backdrop-filter: blur(18px);
   }
   .app-mobile-dock a,
-  .app-mobile-dock button { display: flex; align-items: center; justify-content: center; min-height: 49px; padding: 0 8px; border: 0; border-radius: 13px; background: transparent; color: #ddd6cc; font: inherit; font-size: .79rem; font-weight: 500; text-decoration: none; }
+  .app-mobile-dock button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 54px; padding: 4px 2px; border: 0; border-radius: 13px; background: transparent; color: #ddd6cc; font: inherit; font-size: .66rem; font-weight: 600; line-height: 1; text-decoration: none; }
+  .app-mobile-dock svg { width: 17px; height: 17px; flex: none; }
   .app-mobile-dock .is-primary { background: var(--app-gold); color: #171109; font-weight: 700; }
+  .page-service-app .floating-cta { display: none; }
   .page-service-app .footer { padding-bottom: 84px; }
 }
 
